@@ -1,0 +1,1411 @@
+doctype
+
+html(lang="ru")
+  
+  -var active = 'Календарь' //активный пункт меню, список в header.jade
+  -var pageTitle = 'Календарь мероприятий' + ' - B.K.S.Iyengar Ukraine' //title страницы для генерации верстки  
+  -var navigation = { 'Главная': '#', 'Новости': '#', 'Преподаватели': '#', 'Информация': '#', 'Календарь': '#', 'Центры': '#', 'Контакты': '#' };
+
+  head
+    include ./_include/_head
+
+  body
+    
+    <!-- Preloader -->
+    .loader
+      .loader__block
+    
+    nav#menu.navigation(role="navigation")
+      .lang
+        ul
+          li.active: a(href="#") Рус
+          li: a(href="#") Укр
+          
+      ul
+        each val, key in navigation
+          if active === key
+            li.active
+              a(href=val, title=key)= key
+          else
+            li
+              a(href=val, title=key)= key
+    
+    #base.base
+      include ./_include/_header
+      
+      .content
+        
+        <!-- News -->  
+        .section
+          .container
+            
+            .section__header
+              h1 Календарь мероприятий
+              
+            .form
+                
+              .calendar__form__header
+                form(action="")
+                  .row
+                    .col-lg-3.col-sm-4
+                      .form-group
+                        select.styler
+                          option(value="Январь" selected) Январь
+                          option(value="Февраль") Февраль
+                          option(value="Март") Март
+                          option(value="Апрель") Апрель
+                          option(value="Май") Май
+                          option(value="Июнь") Июнь
+                          option(value="Июль") Июль
+                          option(value="Август") Август
+                          option(value="Сентябрь") Сентябрь
+                          option(value="Октябрь") Октябрь
+                          option(value="Ноябрь") Ноябрь
+                          option(value="Декабрь") Декабрь
+                          
+                    .col-lg-2.col-sm-3
+                      .form-group
+                        select.styler
+                          option(value="1990") 1990
+                          option(value="1991") 1991
+                          option(value="1992") 1992
+                          option(value="1993") 1993
+                          option(value="1994") 1994
+                          option(value="1995") 1995
+                          option(value="1996") 1996
+                          option(value="1997") 1997
+                          option(value="1998") 1998
+                          option(value="1999") 1999
+                          option(value="2000") 2000
+                          option(value="2001") 2001
+                          option(value="2002") 2002
+                          option(value="2003") 2003
+                          option(value="2004") 2004
+                          option(value="2005") 2005
+                          option(value="2006") 2006
+                          option(value="2007") 2007
+                          option(value="2008") 2008
+                          option(value="2009") 2009
+                          option(value="2010") 2010
+                          
+                    .col-lg-3.col-sm-5
+                      .form-group
+                        select.styler
+                          option(value="Выберите город" selected) Выберите город
+                          option(value="Киев") Киев
+                          option(value="Харьков") Харьков
+                          option(value="Ереван") Ереван
+                          option(value="Днепропетровск") Днепропетровск
+            
+              .calendar__year
+                
+                #calendar__year__row.calendar__year__row.row
+                  .col-lg-3.col-md-4.col-sm-6.col-xs-12
+                    .calendar__year__block
+                      table.cal
+                        caption Январь
+                        thead
+                          tr
+                            th Пн
+                            th Вт
+                            th Ср
+                            th Чт
+                            th Пн
+                            th Сб
+                            th Вс
+                        tbody
+                          tr
+                            td.off
+                              a(href='#') 26
+                            td.off
+                              a(href='#') 27
+                            td.off
+                              a(href='#') 28
+                            td.off
+                              a(href='#') 29
+                            td.off
+                              a(href='#') 30
+                            td.off
+                              a(href='#') 31
+                            td
+                              a(href='#') 1
+                          tr
+                            td
+                              a(href='#') 2
+                            td
+                              a(href='#') 3
+                            td
+                              a(href='#') 4
+                            td
+                              a(href='#') 5
+                            td
+                              a(href='#') 6
+                            td
+                              a(href='#') 7
+                            td
+                              a(href='#') 8
+                          tr
+                            td
+                              a(href='#') 9
+                            td
+                              a(href='#') 10
+                            td
+                              a(href='#') 11
+                            td
+                              a(href='#') 12
+                            td
+                              a(href='#') 13
+                            td
+                              a(href='#') 14
+                            td
+                              a(href='#') 15
+                          tr
+                            td
+                              a(href='#') 16
+                            td
+                              a(href='#') 17
+                            td
+                              a(href='#') 18
+                            td
+                              a(href='#') 19
+                            td
+                              a(href='#') 20
+                            td
+                              a(href='#') 21
+                            td
+                              a(href='#') 22
+                          tr
+                            td
+                              a(href='#') 23
+                            td
+                              a(href='#') 24
+                            td
+                              a(href='#') 25
+                            td
+                              a(href='#') 26
+                            td
+                              a(href='#') 27
+                            td.active
+                              a(href='#') 28
+                            td
+                              a(href='#') 29
+                          tr
+                            td
+                              a(href='#') 30
+                            td
+                              a(href='#') 31
+                            td.off
+                              a(href='#') 1
+                            td.off
+                              a(href='#') 2
+                            td.off
+                              a(href='#') 3
+                            td.off
+                              a(href='#') 4
+                            td.off
+                              a(href='#') 5
+
+                  .col-lg-3.col-md-4.col-sm-6.col-xs-12
+                    .calendar__year__block
+                      table.cal
+                        caption Февраль
+                        thead
+                          tr
+                            th Пн
+                            th Вт
+                            th Ср
+                            th Чт
+                            th Пн
+                            th Сб
+                            th Вс
+                        tbody
+                          tr
+                            td.off
+                              a(href='#') 26
+                            td.off
+                              a(href='#') 27
+                            td.off
+                              a(href='#') 28
+                            td.off
+                              a(href='#') 29
+                            td.off
+                              a(href='#') 30
+                            td.off
+                              a(href='#') 31
+                            td
+                              a(href='#') 1
+                          tr
+                            td
+                              a(href='#') 2
+                            td
+                              a(href='#') 3
+                            td
+                              a(href='#') 4
+                            td
+                              a(href='#') 5
+                            td
+                              a(href='#') 6
+                            td
+                              a(href='#') 7
+                            td
+                              a(href='#') 8
+                          tr
+                            td
+                              a(href='#') 9
+                            td
+                              a(href='#') 10
+                            td
+                              a(href='#') 11
+                            td
+                              a(href='#') 12
+                            td
+                              a(href='#') 13
+                            td
+                              a(href='#') 14
+                            td
+                              a(href='#') 15
+                          tr
+                            td
+                              a(href='#') 16
+                            td
+                              a(href='#') 17
+                            td
+                              a(href='#') 18
+                            td
+                              a(href='#') 19
+                            td
+                              a(href='#') 20
+                            td
+                              a(href='#') 21
+                            td
+                              a(href='#') 22
+                          tr
+                            td
+                              a(href='#') 23
+                            td
+                              a(href='#') 24
+                            td
+                              a(href='#') 25
+                            td
+                              a(href='#') 26
+                            td
+                              a(href='#') 27
+                            td.active
+                              a(href='#') 28
+                            td
+                              a(href='#') 29
+                          tr
+                            td
+                              a(href='#') 30
+                            td
+                              a(href='#') 31
+                            td.off
+                              a(href='#') 1
+                            td.off
+                              a(href='#') 2
+                            td.off
+                              a(href='#') 3
+                            td.off
+                              a(href='#') 4
+                            td.off
+                              a(href='#') 5
+
+                  .col-lg-3.col-md-4.col-sm-6.col-xs-12
+                    .calendar__year__block
+                      table.cal
+                        caption Март
+                        thead
+                          tr
+                            th Пн
+                            th Вт
+                            th Ср
+                            th Чт
+                            th Пн
+                            th Сб
+                            th Вс
+                        tbody
+                          tr
+                            td.off
+                              a(href='#') 26
+                            td.off
+                              a(href='#') 27
+                            td.off
+                              a(href='#') 28
+                            td.off
+                              a(href='#') 29
+                            td.off
+                              a(href='#') 30
+                            td.off
+                              a(href='#') 31
+                            td
+                              a(href='#') 1
+                          tr
+                            td
+                              a(href='#') 2
+                            td
+                              a(href='#') 3
+                            td
+                              a(href='#') 4
+                            td
+                              a(href='#') 5
+                            td
+                              a(href='#') 6
+                            td
+                              a(href='#') 7
+                            td
+                              a(href='#') 8
+                          tr
+                            td
+                              a(href='#') 9
+                            td
+                              a(href='#') 10
+                            td.active
+                              a(href='#' aria-describedby="my-tooltip").tooltip 11
+                            td.active
+                              a(href='#' aria-describedby="my-tooltip2").tooltip2 12
+                            td
+                              a(href='#') 13
+                            td
+                              a(href='#') 14
+                            td
+                              a(href='#') 15
+                          tr.hidden
+                            td 
+                              div#my-tooltip(role="tooltip" style="display: none")
+                                table
+                                  tr
+                                    td.td-icon
+                                      img(src="./tmp/calendar-icon-img.jpg", alt="")
+                                    td Учительский курс
+                                      strong с В. Литвиновым 
+                                
+                            td 
+                              div#my-tooltip2(role="tooltip" style="display: none")
+                                table
+                                  tr
+                                    td.td-icon
+                                      img(src="./tmp/calendar-icon-img.jpg", alt="")
+                                    td
+                                      a(href="#") Учительский курс
+                                        strong с В. Литвиновым 
+                                      
+                                  tr
+                                    td.td-icon
+                                      img(src="./tmp/calendar-icon-img.jpg", alt="")
+                                    td Семинар Габриэллы 
+                                      strong Джубиляро
+                            td test3
+                            td test4
+                            td test5
+                            td test6
+                            td test7
+                          tr
+                            td
+                              a(href='#') 16
+                            td.active
+                              a(href='#') 17
+                            td
+                              a(href='#') 18
+                            td
+                              a(href='#') 19
+                            td
+                              a(href='#') 20
+                            td
+                              a(href='#') 21
+                            td
+                              a(href='#') 22
+                          tr
+                            td
+                              a(href='#') 23
+                            td
+                              a(href='#') 24
+                            td
+                              a(href='#') 25
+                            td.active
+                              a(href='#') 26
+                            td.active
+                              a(href='#') 27
+                            td.active
+                              a(href='#') 28
+                            td
+                              a(href='#') 29
+                          tr
+                            td
+                              a(href='#') 30
+                            td
+                              a(href='#') 31
+                            td.off
+                              a(href='#') 1
+                            td.off
+                              a(href='#') 2
+                            td.off
+                              a(href='#') 3
+                            td.off
+                              a(href='#') 4
+                            td.off
+                              a(href='#') 5
+
+                  .col-lg-3.col-md-4.col-sm-6.col-xs-12
+                    .calendar__year__block
+                      table.cal
+                        caption Апрель
+                        thead
+                          tr
+                            th Пн
+                            th Вт
+                            th Ср
+                            th Чт
+                            th Пн
+                            th Сб
+                            th Вс
+                        tbody
+                          tr
+                            td.off
+                              a(href='#') 26
+                            td.off
+                              a(href='#') 27
+                            td.off
+                              a(href='#') 28
+                            td.off
+                              a(href='#') 29
+                            td.off
+                              a(href='#') 30
+                            td.off
+                              a(href='#') 31
+                            td
+                              a(href='#') 1
+                          tr
+                            td
+                              a(href='#') 2
+                            td
+                              a(href='#') 3
+                            td
+                              a(href='#') 4
+                            td
+                              a(href='#') 5
+                            td
+                              a(href='#') 6
+                            td
+                              a(href='#') 7
+                            td
+                              a(href='#') 8
+                          tr
+                            td
+                              a(href='#') 9
+                            td
+                              a(href='#') 10
+                            td
+                              a(href='#') 11
+                            td
+                              a(href='#') 12
+                            td
+                              a(href='#') 13
+                            td
+                              a(href='#') 14
+                            td
+                              a(href='#') 15
+                          tr
+                            td
+                              a(href='#') 16
+                            td
+                              a(href='#') 17
+                            td
+                              a(href='#') 18
+                            td
+                              a(href='#') 19
+                            td
+                              a(href='#') 20
+                            td
+                              a(href='#') 21
+                            td
+                              a(href='#') 22
+                          tr
+                            td
+                              a(href='#') 23
+                            td
+                              a(href='#') 24
+                            td
+                              a(href='#') 25
+                            td
+                              a(href='#') 26
+                            td
+                              a(href='#') 27
+                            td.active
+                              a(href='#') 28
+                            td
+                              a(href='#') 29
+                          tr
+                            td
+                              a(href='#') 30
+                            td
+                              a(href='#') 31
+                            td.off
+                              a(href='#') 1
+                            td.off
+                              a(href='#') 2
+                            td.off
+                              a(href='#') 3
+                            td.off
+                              a(href='#') 4
+                            td.off
+                              a(href='#') 5
+
+                  .col-lg-3.col-md-4.col-sm-6.col-xs-12
+                    .calendar__year__block
+                      table.cal
+                        caption Май
+                        thead
+                          tr
+                            th Пн
+                            th Вт
+                            th Ср
+                            th Чт
+                            th Пн
+                            th Сб
+                            th Вс
+                        tbody
+                          tr
+                            td.off
+                              a(href='#') 26
+                            td.off
+                              a(href='#') 27
+                            td.off
+                              a(href='#') 28
+                            td.off
+                              a(href='#') 29
+                            td.off
+                              a(href='#') 30
+                            td.off
+                              a(href='#') 31
+                            td
+                              a(href='#') 1
+                          tr
+                            td
+                              a(href='#') 2
+                            td
+                              a(href='#') 3
+                            td
+                              a(href='#') 4
+                            td
+                              a(href='#') 5
+                            td
+                              a(href='#') 6
+                            td
+                              a(href='#') 7
+                            td
+                              a(href='#') 8
+                          tr
+                            td
+                              a(href='#') 9
+                            td
+                              a(href='#') 10
+                            td
+                              a(href='#') 11
+                            td
+                              a(href='#') 12
+                            td
+                              a(href='#') 13
+                            td
+                              a(href='#') 14
+                            td
+                              a(href='#') 15
+                          tr
+                            td
+                              a(href='#') 16
+                            td
+                              a(href='#') 17
+                            td
+                              a(href='#') 18
+                            td
+                              a(href='#') 19
+                            td
+                              a(href='#') 20
+                            td
+                              a(href='#') 21
+                            td
+                              a(href='#') 22
+                          tr
+                            td
+                              a(href='#') 23
+                            td
+                              a(href='#') 24
+                            td
+                              a(href='#') 25
+                            td
+                              a(href='#') 26
+                            td
+                              a(href='#') 27
+                            td.active
+                              a(href='#') 28
+                            td
+                              a(href='#') 29
+                          tr
+                            td
+                              a(href='#') 30
+                            td
+                              a(href='#') 31
+                            td.off
+                              a(href='#') 1
+                            td.off
+                              a(href='#') 2
+                            td.off
+                              a(href='#') 3
+                            td.off
+                              a(href='#') 4
+                            td.off
+                              a(href='#') 5
+
+                  .col-lg-3.col-md-4.col-sm-6.col-xs-12
+                    .calendar__year__block
+                      table.cal
+                        caption Июнь
+                        thead
+                          tr
+                            th Пн
+                            th Вт
+                            th Ср
+                            th Чт
+                            th Пн
+                            th Сб
+                            th Вс
+                        tbody
+                          tr
+                            td.off
+                              a(href='#') 26
+                            td.off
+                              a(href='#') 27
+                            td.off
+                              a(href='#') 28
+                            td.off
+                              a(href='#') 29
+                            td.off
+                              a(href='#') 30
+                            td.off
+                              a(href='#') 31
+                            td
+                              a(href='#') 1
+                          tr
+                            td
+                              a(href='#') 2
+                            td
+                              a(href='#') 3
+                            td
+                              a(href='#') 4
+                            td
+                              a(href='#') 5
+                            td
+                              a(href='#') 6
+                            td
+                              a(href='#') 7
+                            td
+                              a(href='#') 8
+                          tr
+                            td
+                              a(href='#') 9
+                            td
+                              a(href='#') 10
+                            td
+                              a(href='#') 11
+                            td
+                              a(href='#') 12
+                            td
+                              a(href='#') 13
+                            td
+                              a(href='#') 14
+                            td
+                              a(href='#') 15
+                          tr
+                            td
+                              a(href='#') 16
+                            td
+                              a(href='#') 17
+                            td
+                              a(href='#') 18
+                            td
+                              a(href='#') 19
+                            td
+                              a(href='#') 20
+                            td
+                              a(href='#') 21
+                            td
+                              a(href='#') 22
+                          tr
+                            td
+                              a(href='#') 23
+                            td
+                              a(href='#') 24
+                            td
+                              a(href='#') 25
+                            td
+                              a(href='#') 26
+                            td
+                              a(href='#') 27
+                            td.active
+                              a(href='#') 28
+                            td
+                              a(href='#') 29
+                          tr
+                            td
+                              a(href='#') 30
+                            td
+                              a(href='#') 31
+                            td.off
+                              a(href='#') 1
+                            td.off
+                              a(href='#') 2
+                            td.off
+                              a(href='#') 3
+                            td.off
+                              a(href='#') 4
+                            td.off
+                              a(href='#') 5
+
+                  .col-lg-3.col-md-4.col-sm-6.col-xs-12
+                    .calendar__year__block
+                      table.cal
+                        caption Июль
+                        thead
+                          tr
+                            th Пн
+                            th Вт
+                            th Ср
+                            th Чт
+                            th Пн
+                            th Сб
+                            th Вс
+                        tbody
+                          tr
+                            td.off
+                              a(href='#') 26
+                            td.off
+                              a(href='#') 27
+                            td.off
+                              a(href='#') 28
+                            td.off
+                              a(href='#') 29
+                            td.off
+                              a(href='#') 30
+                            td.off
+                              a(href='#') 31
+                            td
+                              a(href='#') 1
+                          tr
+                            td
+                              a(href='#') 2
+                            td
+                              a(href='#') 3
+                            td
+                              a(href='#') 4
+                            td
+                              a(href='#') 5
+                            td
+                              a(href='#') 6
+                            td
+                              a(href='#') 7
+                            td
+                              a(href='#') 8
+                          tr
+                            td
+                              a(href='#') 9
+                            td
+                              a(href='#') 10
+                            td
+                              a(href='#') 11
+                            td
+                              a(href='#') 12
+                            td
+                              a(href='#') 13
+                            td
+                              a(href='#') 14
+                            td
+                              a(href='#') 15
+                          tr
+                            td
+                              a(href='#') 16
+                            td
+                              a(href='#') 17
+                            td
+                              a(href='#') 18
+                            td
+                              a(href='#') 19
+                            td
+                              a(href='#') 20
+                            td
+                              a(href='#') 21
+                            td
+                              a(href='#') 22
+                          tr
+                            td
+                              a(href='#') 23
+                            td
+                              a(href='#') 24
+                            td
+                              a(href='#') 25
+                            td
+                              a(href='#') 26
+                            td
+                              a(href='#') 27
+                            td.active
+                              a(href='#') 28
+                            td
+                              a(href='#') 29
+                          tr
+                            td
+                              a(href='#') 30
+                            td
+                              a(href='#') 31
+                            td.off
+                              a(href='#') 1
+                            td.off
+                              a(href='#') 2
+                            td.off
+                              a(href='#') 3
+                            td.off
+                              a(href='#') 4
+                            td.off
+                              a(href='#') 5
+
+                  .col-lg-3.col-md-4.col-sm-6.col-xs-12
+                    .calendar__year__block
+                      table.cal
+                        caption Август
+                        thead
+                          tr
+                            th Пн
+                            th Вт
+                            th Ср
+                            th Чт
+                            th Пн
+                            th Сб
+                            th Вс
+                        tbody
+                          tr
+                            td.off
+                              a(href='#') 26
+                            td.off
+                              a(href='#') 27
+                            td.off
+                              a(href='#') 28
+                            td.off
+                              a(href='#') 29
+                            td.off
+                              a(href='#') 30
+                            td.off
+                              a(href='#') 31
+                            td
+                              a(href='#') 1
+                          tr
+                            td
+                              a(href='#') 2
+                            td
+                              a(href='#') 3
+                            td
+                              a(href='#') 4
+                            td
+                              a(href='#') 5
+                            td
+                              a(href='#') 6
+                            td
+                              a(href='#') 7
+                            td
+                              a(href='#') 8
+                          tr
+                            td
+                              a(href='#') 9
+                            td
+                              a(href='#') 10
+                            td
+                              a(href='#') 11
+                            td
+                              a(href='#') 12
+                            td
+                              a(href='#') 13
+                            td
+                              a(href='#') 14
+                            td
+                              a(href='#') 15
+                          tr
+                            td
+                              a(href='#') 16
+                            td
+                              a(href='#') 17
+                            td
+                              a(href='#') 18
+                            td
+                              a(href='#') 19
+                            td
+                              a(href='#') 20
+                            td
+                              a(href='#') 21
+                            td
+                              a(href='#') 22
+                          tr
+                            td
+                              a(href='#') 23
+                            td
+                              a(href='#') 24
+                            td
+                              a(href='#') 25
+                            td
+                              a(href='#') 26
+                            td
+                              a(href='#') 27
+                            td.active
+                              a(href='#') 28
+                            td
+                              a(href='#') 29
+                          tr
+                            td
+                              a(href='#') 30
+                            td
+                              a(href='#') 31
+                            td.off
+                              a(href='#') 1
+                            td.off
+                              a(href='#') 2
+                            td.off
+                              a(href='#') 3
+                            td.off
+                              a(href='#') 4
+                            td.off
+                              a(href='#') 5
+
+                  .col-lg-3.col-md-4.col-sm-6.col-xs-12
+                    .calendar__year__block
+                      table.cal
+                        caption Сентябрь
+                        thead
+                          tr
+                            th Пн
+                            th Вт
+                            th Ср
+                            th Чт
+                            th Пн
+                            th Сб
+                            th Вс
+                        tbody
+                          tr
+                            td.off
+                              a(href='#') 26
+                            td.off
+                              a(href='#') 27
+                            td.off
+                              a(href='#') 28
+                            td.off
+                              a(href='#') 29
+                            td.off
+                              a(href='#') 30
+                            td.off
+                              a(href='#') 31
+                            td
+                              a(href='#') 1
+                          tr
+                            td
+                              a(href='#') 2
+                            td
+                              a(href='#') 3
+                            td
+                              a(href='#') 4
+                            td
+                              a(href='#') 5
+                            td
+                              a(href='#') 6
+                            td
+                              a(href='#') 7
+                            td
+                              a(href='#') 8
+                          tr
+                            td
+                              a(href='#') 9
+                            td
+                              a(href='#') 10
+                            td
+                              a(href='#') 11
+                            td
+                              a(href='#') 12
+                            td
+                              a(href='#') 13
+                            td
+                              a(href='#') 14
+                            td
+                              a(href='#') 15
+                          tr
+                            td
+                              a(href='#') 16
+                            td
+                              a(href='#') 17
+                            td
+                              a(href='#') 18
+                            td
+                              a(href='#') 19
+                            td
+                              a(href='#') 20
+                            td
+                              a(href='#') 21
+                            td
+                              a(href='#') 22
+                          tr
+                            td
+                              a(href='#') 23
+                            td
+                              a(href='#') 24
+                            td
+                              a(href='#') 25
+                            td
+                              a(href='#') 26
+                            td
+                              a(href='#') 27
+                            td.active
+                              a(href='#') 28
+                            td
+                              a(href='#') 29
+                          tr
+                            td
+                              a(href='#') 30
+                            td
+                              a(href='#') 31
+                            td.off
+                              a(href='#') 1
+                            td.off
+                              a(href='#') 2
+                            td.off
+                              a(href='#') 3
+                            td.off
+                              a(href='#') 4
+                            td.off
+                              a(href='#') 5
+
+                  .col-lg-3.col-md-4.col-sm-6.col-xs-12
+                    .calendar__year__block
+                      table.cal
+                        caption Октябрь
+                        thead
+                          tr
+                            th Пн
+                            th Вт
+                            th Ср
+                            th Чт
+                            th Пн
+                            th Сб
+                            th Вс
+                        tbody
+                          tr
+                            td.off
+                              a(href='#') 26
+                            td.off
+                              a(href='#') 27
+                            td.off
+                              a(href='#') 28
+                            td.off
+                              a(href='#') 29
+                            td.off
+                              a(href='#') 30
+                            td.off
+                              a(href='#') 31
+                            td
+                              a(href='#') 1
+                          tr
+                            td
+                              a(href='#') 2
+                            td
+                              a(href='#') 3
+                            td
+                              a(href='#') 4
+                            td
+                              a(href='#') 5
+                            td
+                              a(href='#') 6
+                            td
+                              a(href='#') 7
+                            td
+                              a(href='#') 8
+                          tr
+                            td
+                              a(href='#') 9
+                            td
+                              a(href='#') 10
+                            td
+                              a(href='#') 11
+                            td
+                              a(href='#') 12
+                            td
+                              a(href='#') 13
+                            td
+                              a(href='#') 14
+                            td
+                              a(href='#') 15
+                          tr
+                            td
+                              a(href='#') 16
+                            td
+                              a(href='#') 17
+                            td
+                              a(href='#') 18
+                            td
+                              a(href='#') 19
+                            td
+                              a(href='#') 20
+                            td
+                              a(href='#') 21
+                            td
+                              a(href='#') 22
+                          tr
+                            td
+                              a(href='#') 23
+                            td
+                              a(href='#') 24
+                            td
+                              a(href='#') 25
+                            td
+                              a(href='#') 26
+                            td
+                              a(href='#') 27
+                            td.active
+                              a(href='#') 28
+                            td
+                              a(href='#') 29
+                          tr
+                            td
+                              a(href='#') 30
+                            td
+                              a(href='#') 31
+                            td.off
+                              a(href='#') 1
+                            td.off
+                              a(href='#') 2
+                            td.off
+                              a(href='#') 3
+                            td.off
+                              a(href='#') 4
+                            td.off
+                              a(href='#') 5
+
+                  .col-lg-3.col-md-4.col-sm-6.col-xs-12
+                    .calendar__year__block
+                      table.cal
+                        caption Ноябрь
+                        thead
+                          tr
+                            th Пн
+                            th Вт
+                            th Ср
+                            th Чт
+                            th Пн
+                            th Сб
+                            th Вс
+                        tbody
+                          tr
+                            td.off
+                              a(href='#') 26
+                            td.off
+                              a(href='#') 27
+                            td.off
+                              a(href='#') 28
+                            td.off
+                              a(href='#') 29
+                            td.off
+                              a(href='#') 30
+                            td.off
+                              a(href='#') 31
+                            td
+                              a(href='#') 1
+                          tr
+                            td
+                              a(href='#') 2
+                            td
+                              a(href='#') 3
+                            td
+                              a(href='#') 4
+                            td
+                              a(href='#') 5
+                            td
+                              a(href='#') 6
+                            td
+                              a(href='#') 7
+                            td
+                              a(href='#') 8
+                          tr
+                            td
+                              a(href='#') 9
+                            td
+                              a(href='#') 10
+                            td
+                              a(href='#') 11
+                            td
+                              a(href='#') 12
+                            td
+                              a(href='#') 13
+                            td
+                              a(href='#') 14
+                            td
+                              a(href='#') 15
+                          tr
+                            td
+                              a(href='#') 16
+                            td
+                              a(href='#') 17
+                            td
+                              a(href='#') 18
+                            td
+                              a(href='#') 19
+                            td
+                              a(href='#') 20
+                            td
+                              a(href='#') 21
+                            td
+                              a(href='#') 22
+                          tr
+                            td
+                              a(href='#') 23
+                            td
+                              a(href='#') 24
+                            td
+                              a(href='#') 25
+                            td
+                              a(href='#') 26
+                            td
+                              a(href='#') 27
+                            td.active
+                              a(href='#') 28
+                            td
+                              a(href='#') 29
+                          tr
+                            td
+                              a(href='#') 30
+                            td
+                              a(href='#') 31
+                            td.off
+                              a(href='#') 1
+                            td.off
+                              a(href='#') 2
+                            td.off
+                              a(href='#') 3
+                            td.off
+                              a(href='#') 4
+                            td.off
+                              a(href='#') 5
+
+                  .col-lg-3.col-md-4.col-sm-6.col-xs-12
+                    .calendar__year__block
+                      table.cal
+                        caption Декабрь
+                        thead
+                          tr
+                            th Пн
+                            th Вт
+                            th Ср
+                            th Чт
+                            th Пн
+                            th Сб
+                            th Вс
+                        tbody
+                          tr
+                            td.off
+                              a(href='#') 26
+                            td.off
+                              a(href='#') 27
+                            td.off
+                              a(href='#') 28
+                            td.off
+                              a(href='#') 29
+                            td.off
+                              a(href='#') 30
+                            td.off
+                              a(href='#') 31
+                            td
+                              a(href='#') 1
+                          tr
+                            td
+                              a(href='#') 2
+                            td
+                              a(href='#') 3
+                            td
+                              a(href='#') 4
+                            td
+                              a(href='#') 5
+                            td
+                              a(href='#') 6
+                            td
+                              a(href='#') 7
+                            td
+                              a(href='#') 8
+                          tr
+                            td
+                              a(href='#') 9
+                            td
+                              a(href='#') 10
+                            td
+                              a(href='#') 11
+                            td
+                              a(href='#') 12
+                            td
+                              a(href='#') 13
+                            td
+                              a(href='#') 14
+                            td
+                              a(href='#') 15
+                          tr
+                            td
+                              a(href='#') 16
+                            td
+                              a(href='#') 17
+                            td
+                              a(href='#') 18
+                            td
+                              a(href='#') 19
+                            td
+                              a(href='#') 20
+                            td
+                              a(href='#') 21
+                            td
+                              a(href='#') 22
+                          tr
+                            td
+                              a(href='#') 23
+                            td
+                              a(href='#') 24
+                            td
+                              a(href='#') 25
+                            td
+                              a(href='#') 26
+                            td
+                              a(href='#') 27
+                            td.active
+                              a(href='#') 28
+                            td
+                              a(href='#') 29
+                          tr
+                            td
+                              a(href='#') 30
+                            td
+                              a(href='#') 31
+                            td.off
+                              a(href='#') 1
+                            td.off
+                              a(href='#') 2
+                            td.off
+                              a(href='#') 3
+                            td.off
+                              a(href='#') 4
+                            td.off
+                              a(href='#') 5
+
+      
+      include ./_include/_footer
+      //- div(style="height: 500px; background-color: #ccc")
+      
+      //[if gte IE 9]
+        <script src='./js/libs/html5shiv/es5-shim.min.js'>
+        <script src='./js/libs/html5shiv/html5shiv.min.js'>
+        <script src='./js/libs/html5shiv/html5shiv-printshiv.min.js'>
+        <script src='./js/libs/respond/respond.min.js'><![endif]
+
+      script(src='./js/libs/jquery/jquery-2.1.4.min.js')
+      script(src='./js/libs/jquery/jquery-migrate-1.2.1.min.js')
+      script(src='./js/libs/modernizr/modernizr.js')
+      script(src='./js/libs/plugins-scroll/plugins-scroll.js')
+      include ./_include/_footer-js
+      script(src='./js/common.js')
+
+    #back-top
+      i.zmdi.zmdi-long-arrow-up

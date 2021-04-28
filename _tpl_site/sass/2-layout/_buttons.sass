@@ -1,0 +1,42 @@
+.btn
+  display: inline-block
+  padding: 6px 30px
+  margin-bottom: 0
+  font-size: 14px
+  font-weight: 400
+  line-height: 1.42857143
+  text-align: center
+  white-space: nowrap
+  vertical-align: middle
+  touch-action: manipulation
+  cursor: pointer
+  user-select: none
+  background-image: none
+  border: 1px solid transparent
+  border-radius: 4px
+  color: $link-color
+  text-decoration: none
+  background-color: inherit
+
+  i
+    margin-left: 10px
+    font-size: rem(18)
+    vertical-align: middle
+
+  &--default
+    color: #333
+    background-color: #fff
+    border-color: #ccc
+
+  &--border
+    border-color: $link-color
+    &:hover
+      background-color: $link-color
+      color: $color-white
+
+  &--news
+    margin-top: 20px
+
+  &:hover, &:active, &:focus
+    text-decoration: none
+    outline: none

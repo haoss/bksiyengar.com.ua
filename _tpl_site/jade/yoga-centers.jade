@@ -1,0 +1,146 @@
+doctype
+
+html(lang="ru")
+  
+  -var active = 'Центры' //активный пункт меню, список в header.jade
+  -var pageTitle = 'Центры' + ' - B.K.S.Iyengar Ukraine' //title страницы для генерации верстки  
+  -var navigation = { 'Главная': '#', 'Новости': '#', 'Преподаватели': '#', 'Информация': '#', 'Календарь': '#', 'Центры': '#', 'Контакты': '#' };
+
+  head
+    include ./_include/_head
+
+  body
+    
+    <!-- Preloader -->
+    .loader
+      .loader__block
+    
+    nav#menu.navigation(role="navigation")
+      .lang
+        ul
+          li.active: a(href="#") Рус
+          li: a(href="#") Укр
+          
+      ul
+        each val, key in navigation
+          if active === key
+            li.active
+              a(href=val, title=key)= key
+          else
+            li
+              a(href=val, title=key)= key
+    
+    #base.base
+      include ./_include/_header
+      
+      .content
+        
+        <!-- News -->  
+        .section.yogaCenters.yogaCenters--list
+          .container
+            
+            .section__header
+              h1 Центры, преподающие Йогу Айенгара в Украине
+
+            .row
+              .col-md-4.col-sm-6
+                a.yogaCenters__block(href="#")
+                  .img
+                    img(src="./tmp/yoga-centers/yoga-center-1.jpg", alt="").img-responsive
+                  .icon__round
+                    i.zmdi.zmdi-pin
+                  .text
+                    p Харьков, пер. Костюринский 2 Харьков, пер. Костюринский 2
+              
+              .col-md-4.col-sm-6
+                a.yogaCenters__block(href="#")
+                  .img
+                    img(src="./tmp/yoga-centers/yoga-center-2.jpg", alt="").img-responsive
+                  .icon__round
+                    i.zmdi.zmdi-pin
+                  .text
+                    p Днепропетровск, ул. Грушевского 23
+                  
+              .col-md-4.col-sm-6
+                a.yogaCenters__block(href="#")
+                  .img
+                    img(src="./tmp/yoga-centers/yoga-center-3.jpg", alt="").img-responsive
+                  .icon__round
+                    i.zmdi.zmdi-pin
+                  .text
+                    p Киев, ул. Грушевского 23
+            
+              .col-md-4.col-sm-6
+                a.yogaCenters__block(href="#")
+                  .img
+                    img(src="./tmp/yoga-centers/yoga-center-1.jpg", alt="").img-responsive
+                  .icon__round
+                    i.zmdi.zmdi-pin
+                  .text
+                    p Харьков, пер. Костюринский 2 Харьков, пер. Костюринский 2
+              
+              .col-md-4.col-sm-6
+                a.yogaCenters__block(href="#")
+                  .img
+                    img(src="./tmp/yoga-centers/yoga-center-2.jpg", alt="").img-responsive
+                  .icon__round
+                    i.zmdi.zmdi-pin
+                  .text
+                    p Днепропетровск, ул. Грушевского 23
+                  
+              .col-md-4.col-sm-6
+                a.yogaCenters__block(href="#")
+                  .img
+                    img(src="./tmp/yoga-centers/yoga-center-3.jpg", alt="").img-responsive
+                  .icon__round
+                    i.zmdi.zmdi-pin
+                  .text
+                    p Киев, ул. Грушевского 23
+            
+              .col-md-4.col-sm-6
+                a.yogaCenters__block(href="#")
+                  .img
+                    img(src="./tmp/yoga-centers/yoga-center-1.jpg", alt="").img-responsive
+                  .icon__round
+                    i.zmdi.zmdi-pin
+                  .text
+                    p Харьков, пер. Костюринский 2 Харьков, пер. Костюринский 2
+              
+              .col-md-4.col-sm-6
+                a.yogaCenters__block(href="#")
+                  .img
+                    img(src="./tmp/yoga-centers/yoga-center-2.jpg", alt="").img-responsive
+                  .icon__round
+                    i.zmdi.zmdi-pin
+                  .text
+                    p Днепропетровск, ул. Грушевского 23
+                  
+              .col-md-4.col-sm-6
+                a.yogaCenters__block(href="#")
+                  .img
+                    img(src="./tmp/yoga-centers/yoga-center-3.jpg", alt="").img-responsive
+                  .icon__round
+                    i.zmdi.zmdi-pin
+                  .text
+                    p Киев, ул. Грушевского 23
+              
+            
+      
+      include ./_include/_footer
+      //- div(style="height: 500px; background-color: #ccc")
+      
+      //[if gte IE 9]
+        <script src='./js/libs/html5shiv/es5-shim.min.js'>
+        <script src='./js/libs/html5shiv/html5shiv.min.js'>
+        <script src='./js/libs/html5shiv/html5shiv-printshiv.min.js'>
+        <script src='./js/libs/respond/respond.min.js'><![endif]
+
+      script(src='./js/libs/jquery/jquery-2.1.4.min.js')
+      script(src='./js/libs/jquery/jquery-migrate-1.2.1.min.js')
+      script(src='./js/libs/modernizr/modernizr.js')
+      script(src='./js/libs/plugins-scroll/plugins-scroll.js')
+      include ./_include/_footer-js
+      script(src='./js/common.js')
+
+    #back-top
+      i.zmdi.zmdi-long-arrow-up

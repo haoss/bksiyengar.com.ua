@@ -1,0 +1,77 @@
+doctype
+
+html(lang="ru")
+  
+  -var active = 'Ошибка 404' //активный пункт меню, список в header.jade
+  -var pageTitle = 'Ошибка 404' + ' - B.K.S.Iyengar Ukraine' //title страницы для генерации верстки  
+  -var navigation = { 'Главная': '#', 'Новости': '#', 'Преподаватели': '#', 'Информация': '#', 'Календарь': '#', 'Центры': '#', 'Контакты': '#' };
+
+  head
+    include ./_include/_head
+
+  body
+    
+    <!-- Preloader -->
+    .loader
+      .loader__block
+    
+    nav#menu.navigation(role="navigation")
+      .lang
+        ul
+          li.active: a(href="#") Рус
+          li: a(href="#") Укр
+          
+      ul
+        each val, key in navigation
+          if active === key
+            li.active
+              a(href=val, title=key)= key
+          else
+            li
+              a(href=val, title=key)= key
+    
+    #base.base
+      include ./_include/_header
+      
+      .content
+        
+        .section
+          .container
+            
+            .row
+              .col-sm-6
+                
+                .page404
+                  
+                  h2 
+                    strong 404
+                    span ошибка
+                  
+                  p Неправильно набран адрес, или вы перешли по битой ссылке 
+                  p Перейдите на 
+                    a(href="#") 
+                      strong Главную
+                    |  страницу
+                
+              .col-sm-6.hidden-xs
+                img(src="./img/page-404.jpg", alt="").img-responsive
+            
+      
+      include ./_include/_footer
+      //- div(style="height: 500px; background-color: #ccc")
+      
+      //[if gte IE 9]
+        <script src='./js/libs/html5shiv/es5-shim.min.js'>
+        <script src='./js/libs/html5shiv/html5shiv.min.js'>
+        <script src='./js/libs/html5shiv/html5shiv-printshiv.min.js'>
+        <script src='./js/libs/respond/respond.min.js'><![endif]
+
+      script(src='./js/libs/jquery/jquery-2.1.4.min.js')
+      script(src='./js/libs/jquery/jquery-migrate-1.2.1.min.js')
+      script(src='./js/libs/modernizr/modernizr.js')
+      script(src='./js/libs/plugins-scroll/plugins-scroll.js')
+      include ./_include/_footer-js
+      script(src='./js/common.js')
+
+    #back-top
+      i.zmdi.zmdi-long-arrow-up

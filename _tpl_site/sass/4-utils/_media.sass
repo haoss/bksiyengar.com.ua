@@ -1,0 +1,478 @@
+/*==========  Desktop First Method  ==========*/
+
+/* Large Devices, Wide Screens */
+@media only screen and (max-width : 1339px)
+  /**/
+
+/* Large Devices, Wide Screens */
+@media only screen and (max-width : 1199px)
+  h1, .h1
+    font-size: rem(24)
+
+  .section
+    padding: 30px 0
+
+  .header
+    &__container
+      height: 280px
+      blockquote
+        font-size: rem(15)
+        p
+          line-height: 24px
+          max-width: 565px
+      .blockquote__title
+        font-size: rem(18)
+    &--main
+      .header__container
+        height: 470px
+
+  .logo
+    img
+      width: 180px
+
+  .top__navigation
+    font-size: rem(14)
+
+  .teachers
+    &__block
+      font-size: rem(14)
+      p
+        margin-left: -10px
+        margin-right: -10px
+      .img
+        width: 130px
+        height: 130px
+        svg
+          width: 65px
+        .teachers--svg5
+          width: 50px
+
+  .yogaCenters
+    &__block
+      width: 293px
+      .text
+        padding-top: 50px
+
+  .icon__round
+    height: 72px
+    width: 72px
+    font-size: rem(35)
+
+  .aboutYoga
+    padding-bottom: 200px
+    background:
+      position: 60% bottom
+      size: cover
+    min-height: 300px
+
+  #back-top
+    width: 50px
+    height: 50px
+    line-height: 50px
+
+  .navigation
+    &__category
+      font-size: rem(16)
+      ul
+        li
+          margin-bottom: 15px
+
+  .page404
+    padding-top: 30px
+
+  .img
+    &--centers
+      margin: 0 auto 20px
+
+  .centers
+    &__contacts
+      flex-wrap: wrap
+      &>div
+        margin-bottom: 20px
+
+  #map_canvas
+    &--contact
+      padding-bottom: 250px
+
+  .calendar
+    &__block
+      padding: 10px
+      height: 135px
+    &__img
+      top: 10px
+      img
+        width: 25px
+    &__text
+      p
+        margin-bottom: 10px
+      &__name
+        display: none
+
+    &__event
+      padding-right: 8px
+      &__body
+        padding: 35px 25px 25px 25px
+      &__row
+        &+.calendar__event__row
+          margin-top: 30px
+
+
+/* Medium Devices, Desktops */
+@media only screen and (max-width : 991px)
+  .header
+    &__container
+      height: 200px
+      blockquote
+        font-size: rem(14)
+        p
+          line-height: 22px
+      .blockquote__title
+        font-size: rem(16)
+    &--main
+      .header__container
+        height: 355px
+
+  .news
+    &__date
+      font-size: rem(13)
+      &>strong
+        font-size: rem(30)
+      time
+        font-size: rem(16)
+    &__header
+      .h1
+        font-size: rem(22)
+
+  .top__navigation
+    display: none
+
+  .teachers__row
+    &:after, &:before
+      display: none
+    display: flex
+    flex-wrap: wrap
+
+  .footer
+    &__top
+      nav
+        &>ul
+          display: block
+          &>li
+            display: block
+            padding-bottom: 20px
+            &>a
+              display: block
+              border-bottom: 1px solid #e3e3e3
+              font-family: "OpenSansSemiBold"
+              .zmdi-chevron-down
+                display: inline-block
+        li
+          ul
+            display: none
+            padding-top: 10px
+
+  .yogaCenters
+    &__block
+      width: 344px
+      .text
+        padding-top: 45px
+
+  .icon__round
+    height: 65px
+    width: 65px
+    font-size: rem(33)
+
+  .aboutYoga
+    background: none
+    min-height: auto
+    padding-bottom: 50px
+
+  #back-top
+    width: 33px
+    height: 33px
+    line-height: 33px
+    font-size: 20px
+
+  .section
+    &__header
+      margin-bottom: 30px
+
+  .page404
+    padding-top: 0px
+    font-size: rem(16)
+    h2
+      margin-bottom: 35px
+      strong
+        font-size: 148px
+      span
+        font-size: 35px
+
+  .social
+    &--centers
+      text-align: center
+      a
+        float: none
+        display: inline-flex
+
+  .logo
+    top: 25px
+
+  .sandwich
+    top: 20px
+
+  .table
+    font-size: rem(14)
+    th
+      font-size: rem(13)
+    td
+      padding-top: 10px
+      padding-bottom: 10px
+
+  .calendar
+    &__block
+      height: 103px
+    &__text
+      display: none !important
+    &__number
+      font-size: 18px
+      left: 10px
+      top: 18px
+    &__img
+      img + img
+        margin-left: 5px
+
+    &__event
+      padding-right: 7px
+      &__body
+        padding: 25px 20px 20px 20px
+      &__row
+        &+.calendar__event__row
+          margin-top: 20px
+      &__text
+        p
+          margin-bottom: 10px
+
+/* Small Devices, Tablets */
+@media only screen and (max-width : 767px)
+  h1, .h1
+    font-size: rem(22)
+  .header
+    &--main
+      .header__container
+        height: auto
+        min-height: 220px
+        padding-top: 75px
+        padding-bottom: 20px
+
+  .news
+    &__row
+      &+.news__row
+        margin-top: 40px
+
+      &__top
+        display: block
+
+    &__header
+      .h1
+        font-size: rem(18)
+        line-height: 1.3
+        font-family: 'OpenSansSemiBold'
+      small
+        font-size: rem(13)
+  .teachers
+    padding-bottom: 10px
+    &__row
+      margin: 0
+
+  .copyright
+    height: 30px
+    line-height: 30px
+    border-top: 1px solid rgba($color-white, .2)
+    text-align: center
+  .footer
+    &__social
+      float: none
+      text-align: center
+      height: auto
+      padding: 10px 0
+      a
+        float: none
+        margin: 0 7px
+        display: inline-flex
+        height: 32px
+        width: 32px
+        font-size: rem(18)
+        border-width: 2px
+        &:first-child
+          margin-left: 7px
+
+  .footer
+    &__top
+      nav
+        margin-bottom: 20px
+    &__contacts
+      max-width: 290px
+      margin: 0 auto
+
+  .yogaCenters
+    &__block
+      width: 286px
+      font-size: rem(15)
+    h1,.h1
+      margin-bottom: 25px
+
+  .icon__round
+    height: 62px
+    width: 62px
+    font-size: rem(30)
+
+  .news
+    &__imd-document
+      float: none
+      margin-right: 0
+    &__em
+      font-size: rem(13)
+
+  .category
+    &__title
+      height: auto
+
+  .img
+    &--document
+      float: none
+      margin: 0 auto 20px
+
+  .page404
+    h2
+      strong
+        font-size: 130px
+      span
+        font-size: 30px
+
+  .yogaCenters--list
+    .yogaCenters__block
+      margin-left: auto
+      margin-right: auto
+      margin-bottom: 30px
+
+  .centers
+    &__contacts
+      font-size: rem(16)
+      flex-direction: column
+
+  .table
+    td
+      padding-left: 10px
+      padding-right: 10px
+
+    &--name
+      font-family: 'OpenSansSemiBold', sans-serif
+
+  .calendar
+    &__img
+      display: none !important
+    &__button
+      border-color: transparent !important
+      height: 15px
+      width: 15px
+      line-height: 15px
+      right: 5px
+      bottom: 5px
+
+    &__event
+      padding-right: 7px
+      &__body
+        padding: 25px 10px 10px 10px
+      &__row
+        .row
+          margin: 0 -5px
+        div[class*=col-]
+          padding: 0 5px
+      &__text
+        padding-left: 10px
+        &:before
+          width: 2px
+          margin-left: -11px
+          height: 60px
+        .h1
+          font-size: rem(16)
+          margin-bottom: 10px
+          line-height: 1.3
+        .h3, h3, .h4, h4, .h5, h5, .h6, h6
+          margin-bottom: 10px
+        &.mobile
+          padding-top: 20px
+          &:before
+            display: none
+
+      &__introtext
+        font-size: 13px
+        line-height: 18px
+      &__date
+        strong
+          font-size: rem(24)
+        .separator
+          margin-top: 10px
+          margin-bottom: 10px
+        small
+          font-size: 12px
+
+  .calendar
+    &__year
+      padding-top: 0
+      &__row
+        margin: 0
+      &__block
+        margin-bottom: 0
+
+@media only screen and (max-width : 599px)
+  .calendar
+    &__block
+      padding: 5px
+      height: 81px
+    &__number
+      font-size: 14px
+      top: 7px
+      left: 7px
+
+/* Extra Small Devices, Phones */
+@media only screen and (max-width : 479px)
+  .calendar
+    &__block
+      height: 42px
+
+/* Custom, iPhone Retina */
+@media only screen and (max-width : 329px)
+  .calendar
+    &__year
+      .owl-prev, .owl-next
+        top: 5px
+        left: 10px
+        font-size: 32px
+      .owl-next
+        left: inherit
+        right: 10px
+
+
+/*==========  Mobile First Method  ==========*/
+
+/* Custom, iPhone Retina */
+@media only screen and (min-width : 320px)
+  /**/
+
+/* Extra Small Devices, Phones */
+@media only screen and (min-width : 480px)
+  /**/
+
+/* Small Devices, Tablets */
+@media only screen and (min-width : 768px)
+  /**/
+
+/* Medium Devices, Desktops */
+@media only screen and (min-width : 992px)
+  #base
+    transform: translateX(0) !important
+
+/* Large Devices, Wide Screens */
+@media only screen and (min-width : 1200px)
+  /**/

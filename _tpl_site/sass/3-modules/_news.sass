@@ -1,0 +1,50 @@
+.news
+  &__date
+    text-align: right
+    max-width: 140px
+    float: right
+    font-size: rem(16)
+    &>strong
+      display: block
+      font-size: rem(40)
+      line-height: 1
+      font-family: 'OpenSansSemiBold'
+      margin-bottom: 5px
+    .separator
+      margin-bottom: 10px
+    time
+      font-size: rem(20)
+
+  &__row
+    &+.news__row
+      margin-top: 60px
+    &__top
+      margin-bottom: 35px
+      display: flex
+      align-items: center
+      small
+        font-size: rem(14)
+
+  &__img
+    box-shadow: 0 0 1px lighten($color-gray, 5%)
+    transition: box-shadow 0.3s linear
+
+  &__em
+    margin-bottom: 10px
+    display: block
+
+  &__imd-document
+    float: left
+    margin-right: 30px
+    margin-bottom: 20px
+
+a
+  .news__img
+      &:hover
+        box-shadow: 0 0 10px lighten($color-gray, 0%)
+
+  &__header
+    .h1
+      color: $primary-color
+    &--xs
+      margin-bottom: 20px

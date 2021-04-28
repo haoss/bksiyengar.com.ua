@@ -1,0 +1,110 @@
+doctype
+
+html(lang="ru")
+  
+  -var active = 'Центры' //активный пункт меню, список в header.jade
+  -var pageTitle = 'Центры' + ' - B.K.S.Iyengar Ukraine' //title страницы для генерации верстки  
+  -var navigation = { 'Главная': '#', 'Новости': '#', 'Преподаватели': '#', 'Информация': '#', 'Календарь': '#', 'Центры': '#', 'Контакты': '#' };
+
+  head
+    include ./_include/_head
+
+  body
+    
+    <!-- Preloader -->
+    .loader
+      .loader__block
+    
+    nav#menu.navigation(role="navigation")
+      .lang
+        ul
+          li.active: a(href="#") Рус
+          li: a(href="#") Укр
+          
+      ul
+        each val, key in navigation
+          if active === key
+            li.active
+              a(href=val, title=key)= key
+          else
+            li
+              a(href=val, title=key)= key
+    #base.base
+      include ./_include/_header
+      
+      .content
+        
+        <!-- News -->  
+        .section
+          .container
+            
+            .section__header
+              h1 Центр «Махараджа YOGA &amp; SPA», Харьков
+          
+            .centers__contacts
+              div
+                i.zmdi.zmdi-phone.zmdi--social
+                span +38 (057) 123 45 69
+              div
+                i.zmdi.zmdi-pin-drop.zmdi--social
+                span Харьков, пер. Костюринский 2 
+              div
+                i.zmdi.zmdi-email.zmdi--social
+                span bks_iyengar@gmail.com
+      
+      .section.section--map
+        #map_canvas.map_canvas--contact
+        // Google Map
+        script(src='https://maps.googleapis.com/maps/api/js?sensor=false')
+        script.
+          function initialize() {
+          var myLatlng = new google.maps.LatLng(49.9869143,36.2320411);
+          var map_options = {
+            zoom: 16,
+            mapTypeId: google.maps.MapTypeId.ROADMAP,
+            center: myLatlng,
+            scrollwheel: false,
+            disableDefaultUI: true
+          }
+          var map = new google.maps.Map(document.getElementById('map_canvas'), map_options)
+          var myIcon = new google.maps.MarkerImage('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACAAAAAgCAYAAABzenr0AAAEwklEQVRYR61XXYxTRRT+zty2d9v9A4RsW5AoCS9s+Ilrou0W3BVCstsuEY1ojD4YE/UBgyYqGjWaaERjwMRIjD7wYEJwXySb3nVjBLaxd5eoIUR+HzZGjGxbRIRCu2xL74yZ2y20cNt7uzovzdzzfed8c+bMmSmhifHPpk2dBbXwFIQYAPg6zphf0hnnGTDluCD+nVoqHbhr7KerTt2SE6Do6XFf8PteM0jsZEBHI44gZIljlz/v2k2JRMnOv62A9MD6JQBGoIiQnbPb7EnDXdy67ODPlxrxGgr4IxpZ6AKSjNDdZPAynIsTatG7YdGhQ9l6/IYCUkMRjQSi1WSDc1yeLSBXvIECN0CC4FEY2lQPFqoqFFbrkoCDfk1/tGkB6aHebRA0XE3MF0tI53MwuLD0pxAh2N4Kn9tdYyeiR/zx5IgVqW4GUkOREySwukK6Xirhz2wOAjeDXxIQkyQEgVgYwCKJJRCWd7ajxaVUxzsW0PT7HQs4PxhepzB2vEKQIc9duYqiYZQ/EfYIT/6t/sS5WTmdDIW8BWR3EWiHnKuKgns6OyTu1lCoOzCSPHO7CMsMpIbWv0JC7KmA5X5PX8uZU0G0v3/y1NNWq0k82H0AhCelbVlHG1prt2J7QNP3OhKQGQp/KQR7vgL+Kz9jFl558WzNQ0dPnrQSMB7uXkcCZuYWeVuwxOetgtHnAS35kiMB09HIMCNsq4BTuRyuFW6UM6AucffXaTDjfX0uKlw0ge2qB8G21pvxCLTfryXvyJzlFqRj4a8B9kyFncnnkZ0tmlPm4sENybNpqwwcDq1dqqB0XtoWtHjQ1XpLAIB9AU1/zlEG0rHIewDerYCvzBZxIZ+fm9LrfUdPfWJZA6FVbwL0obT523zoVNWbMAG8E9T0DxwJmI6FNzOw7ytgLgR+u5yF/OXAdcYQ7Zs4PV7t7Eho1UbGSQNDCyPCioWdkH2hMojYRn/8xyOOBMjLJxNQpwEm7wFzyCKUxSgHBzjjGBaEskMmNglBjzOAyWlXqw8LWm6tnkNkgjn33VaXU/1GFIu8TcD71YqrT4PVFshvd1a/rFy8ERjVP7biNOiEPT4yvGfBsLyaKHvC3zPXUag0pTmjbD6LfV60eWrbMOfG78UZddW9iYTZtBxtQQWUifU+IUDfWBFlVywa3Ox2HqaYF5LVEEI8Fhyd+LZexuzfA9FIEoRIPQeNvgsgEdT0/kYYWwGpaKRHEH5htZ3dVg/n4C6G+7o0/df/JECS04ORfWB41jZqFYCIf+WPT75gx7HNgHRwYcsDXaWSe4oxtNs5lHbzXViilYGx5EU7vCMBZhaikZ0gfGTn0LQLvBoY1Xc7wToWMDUwoHqV7BkFbEXjwuNTgXShm44dK99eNsOxAOknFYtsJaDukZIYArb4NT1uF7hib0qAJE3Heg8z0MPWZx4/BEf1zU6DzwluBg5kBjesNlA6zhirefRxzg2m0NpAfOJ0Mx6bzkD5WK7/Aky8WB2IA3uXavr2ZoLPKwNmLQz1LWZGcUowtqAckF823KWVdv+CrMTNKwOmiGjvy0T06dwqdvg1/bNmVz/vDJhH3XwzeOXjlPtzrjVO/oj+rxkwayHWOwiCCMQnxuazesn5F61npjDWGO4VAAAAAElFTkSuQmCC', null, null, null, new google.maps.Size(32,32));
+          var marker = new google.maps.Marker({
+            position: myLatlng,
+            map: map,
+            icon: myIcon
+          });
+          /* Remove if you dont want B/W Google Map */
+          /*
+          var styles = [
+          {
+          featureType: "all",
+          stylers: [
+          { saturation: -100 }
+          ]
+          }
+          ];
+          map.setOptions({styles: styles});
+          */
+          }
+          google.maps.event.addDomListener(window, 'load', initialize);
+        // Google Map Ends!
+
+      
+      include ./_include/_footer
+      //- div(style="height: 500px; background-color: #ccc")
+      
+      //[if gte IE 9]
+        <script src='./js/libs/html5shiv/es5-shim.min.js'>
+        <script src='./js/libs/html5shiv/html5shiv.min.js'>
+        <script src='./js/libs/html5shiv/html5shiv-printshiv.min.js'>
+        <script src='./js/libs/respond/respond.min.js'><![endif]
+
+      script(src='./js/libs/jquery/jquery-2.1.4.min.js')
+      script(src='./js/libs/jquery/jquery-migrate-1.2.1.min.js')
+      script(src='./js/libs/modernizr/modernizr.js')
+      script(src='./js/libs/plugins-scroll/plugins-scroll.js')
+      include ./_include/_footer-js
+      script(src='./js/common.js')
+
+    #back-top
+      i.zmdi.zmdi-long-arrow-up

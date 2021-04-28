@@ -1,0 +1,108 @@
+.yogaCenters
+  background-color: #f7f7f7
+
+  &__body
+    overflow: hidden
+    padding: 1px
+
+  &__row
+    display: table
+    .div
+      display: table-cell
+      padding: 1px
+      &:last-child
+        .yogaCenters__block
+          margin-right: 0
+
+  h1, .h1
+    text-align: center
+    font-family: 'OpenSansSemiBold'
+    margin-bottom: 50px
+
+  &__block
+    position: relative
+    display: block
+    box-shadow: 0 0 0 1px #e0e0e0
+    width: 360px
+    overflow: hidden
+    text-decoration: none
+    font-family: "OpenSansSemiBold"
+    font-size: rem(16)
+    background-color: $color-white
+    margin-right: 26px
+    &:hover
+      background-color: #ededed
+      text-decoration: none
+    .img
+      min-height: 100px
+      overflow: hidden
+    p
+      height: 40px
+      overflow: hidden
+      margin: 0
+      line-height: 20px
+    .text
+      padding: 55px 20px 20px 20px
+    &.last
+      margin-right: 0
+
+
+    .icon__round
+      position: absolute
+      transform: translateY(-50%)
+      right: 15px
+
+  &--list
+    background-color: inherit
+    padding-bottom: 0
+    .yogaCenters__block
+      margin-bottom: 50px
+
+.icon__round
+  height: 82px
+  width: 82px
+  border-radius: 50%
+  background-color: $color-blue
+  color: $color-white
+  font-size: 40px
+  display: flex
+  justify-content: center
+  align-items: center
+  transition: background-color 1s linear, color 1s linear
+
+.img
+  &--centers
+    margin-bottom: 30px
+
+#map_canvas
+  position: relative
+  overflow: hidden
+  height: 0px
+  padding-bottom: 250px
+  background: white none repeat scroll 0% 0%
+  &--contact
+    padding-bottom: 350px
+
+.centers
+  &__contacts
+    display: flex
+    justify-content: space-between
+    font-size: rem(18)
+    color: $color-blue
+    &>div
+      display: flex
+      align-items: center
+
+.zmdi
+  &--social
+    border: 1px solid #0069ac
+    height: 50px
+    width: 50px
+    vertical-align: middle
+    margin-right: 15px
+    border-radius: 50%
+    display: inline-flex
+    align-items: center
+    justify-content: center
+    font-size: rem(26)
+    color: $color-blue

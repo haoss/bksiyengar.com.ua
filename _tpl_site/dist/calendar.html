@@ -1,0 +1,688 @@
+<!DOCTYPE html>
+<html lang="ru">
+    <head>
+        <meta charset="utf-8">
+        <title>Календарь мероприятий - B.K.S.Iyengar Ukraine</title>
+        <meta name="description" content="">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1"><!-- Old browser -->
+        <script>
+            var $buoop = {vs:{i:10,f:25,o:15,s:6},c:2}; 
+            function $buo_f(){ 
+             var e = document.createElement("script"); 
+             e.src = "http://browser-update.org/update.min.js"; 
+             document.body.appendChild(e);
+            };
+            try {document.addEventListener("DOMContentLoaded", $buo_f,false)}
+            catch(e){window.attachEvent("onload", $buo_f)}
+            
+        </script>
+        <link rel="stylesheet" href="./js/libs/owl.carousel/assets/owl.carousel.css">
+        <link rel="stylesheet" href="./font/material-design-iconic-font/css/material-design-iconic-font.min.css">
+        <link rel="stylesheet" href="./js/libs/malihu-custom-scrollbar-plugin/jquery.mCustomScrollbar.css">
+        <link rel="stylesheet" href="./js/libs/jQueryFormStyler-master/jquery.formstyler.css">
+        <link rel="stylesheet" href="./js/libs/tooltipster/css/tooltipster.css">
+        <link rel="stylesheet" href="./css/main.css">
+    </head>
+    <body><!-- Preloader -->
+        <div class="loader">
+            <div class="loader__block"></div>
+        </div>
+        <nav id="menu" role="navigation" class="navigation">
+            <div class="lang">
+                <ul>
+                    <li class="active"><a href="#">Рус</a></li>
+                    <li><a href="#">Укр</a></li>
+                </ul>
+            </div>
+            <ul>
+                <li><a href="#" title="Главная">Главная</a></li>
+                <li><a href="#" title="Новости">Новости</a></li>
+                <li><a href="#" title="Преподаватели">Преподаватели</a></li>
+                <li><a href="#" title="Информация">Информация</a></li>
+                <li class="active"><a href="#" title="Календарь">Календарь</a></li>
+                <li><a href="#" title="Центры">Центры</a></li>
+                <li><a href="#" title="Контакты">Контакты</a></li>
+            </ul>
+        </nav>
+        <div id="base" class="base"><!-- Header -->
+            <header style="background-image: url('./tmp/header/news.jpg')" class="header">
+                <div class="container">
+                    <div class="lang hidden-xs hidden-sm">
+                        <ul>
+                            <li class="active"><a href="#">Рус</a></li>
+                            <li><a href="#">Укр</a></li>
+                        </ul>
+                    </div><a href="#" class="logo"><img src="./img/logo.svg" alt=""></a><a href="#menu" class="sandwich visible-sm-block visible-xs-block">
+                        <div class="sw-topper"></div>
+                        <div class="sw-bottom"></div>
+                        <div class="sw-footer"></div></a>
+                    <nav role="navigation" class="top__navigation">
+                        <ul>
+                            <li><a href="#" title="Главная">Главная</a></li>
+                            <li><a href="#" title="Новости">Новости</a></li>
+                            <li><a href="#" title="Преподаватели">Преподаватели</a></li>
+                            <li><a href="#" title="Информация">Информация</a></li>
+                            <li class="active"><a href="#" title="Календарь">Календарь</a></li>
+                            <li><a href="#" title="Центры">Центры</a></li>
+                            <li><a href="#" title="Контакты">Контакты</a></li>
+                        </ul>
+                    </nav>
+                    <div class="header__container"></div>
+                </div>
+            </header>
+            <div class="content"><!-- News -->  
+                <div class="section">
+                    <div class="container">
+                        <div class="section__header">
+                            <h1>Календарь мероприятий</h1>
+                        </div>
+                        <div class="form">
+                            <div class="calendar__form__header">
+                                <form action="">
+                                    <div class="row">
+                                        <div class="col-lg-3 col-sm-4">
+                                            <div class="form-group">
+                                                <select class="styler">
+                                                    <option value="Январь" selected>Январь</option>
+                                                    <option value="Февраль">Февраль</option>
+                                                    <option value="Март">Март</option>
+                                                    <option value="Апрель">Апрель</option>
+                                                    <option value="Май">Май</option>
+                                                    <option value="Июнь">Июнь</option>
+                                                    <option value="Июль">Июль</option>
+                                                    <option value="Август">Август</option>
+                                                    <option value="Сентябрь">Сентябрь</option>
+                                                    <option value="Октябрь">Октябрь</option>
+                                                    <option value="Ноябрь">Ноябрь</option>
+                                                    <option value="Декабрь">Декабрь</option>
+                                                </select>
+                                            </div>
+                                        </div>
+                                        <div class="col-lg-2 col-sm-3">
+                                            <div class="form-group">
+                                                <select class="styler">
+                                                    <option value="1990">1990</option>
+                                                    <option value="1991">1991</option>
+                                                    <option value="1992">1992</option>
+                                                    <option value="1993">1993</option>
+                                                    <option value="1994">1994</option>
+                                                    <option value="1995">1995</option>
+                                                    <option value="1996">1996</option>
+                                                    <option value="1997">1997</option>
+                                                    <option value="1998">1998</option>
+                                                    <option value="1999">1999</option>
+                                                    <option value="2000">2000</option>
+                                                    <option value="2001">2001</option>
+                                                    <option value="2002">2002</option>
+                                                    <option value="2003">2003</option>
+                                                    <option value="2004">2004</option>
+                                                    <option value="2005">2005</option>
+                                                    <option value="2006">2006</option>
+                                                    <option value="2007">2007</option>
+                                                    <option value="2008">2008</option>
+                                                    <option value="2009">2009</option>
+                                                    <option value="2010">2010</option>
+                                                </select>
+                                            </div>
+                                        </div>
+                                        <div class="col-lg-3 col-sm-5">
+                                            <div class="form-group">
+                                                <select class="styler">
+                                                    <option value="Выберите город" selected>Выберите город</option>
+                                                    <option value="Киев">Киев</option>
+                                                    <option value="Харьков">Харьков</option>
+                                                    <option value="Ереван">Ереван</option>
+                                                    <option value="Днепропетровск">Днепропетровск</option>
+                                                </select>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </form>
+                            </div>
+                            <div class="calendar__table">
+                                <div class="calendar__row one">
+                                    <div class="calendar__block disabled">
+                                        <div class="calendar__number">0</div>
+                                        <div class="calendar__img"><img src="./tmp/logos/logos-1.png" alt=""></div>
+                                        <div class="calendar__text">
+                                            <p>Учительский курс <br>(1 семинар 1 год)</p>
+                                            <div class="calendar__text__name"> <strong>В. Литвинов</strong></div>
+                                        </div>
+                                        <div class="calendar__button"><i class="zmdi zmdi-chevron-down"></i><i class="zmdi zmdi-chevron-up"></i></div>
+                                    </div>
+                                    <div class="calendar__block">
+                                        <div class="calendar__number">1</div>
+                                        <div class="calendar__img"><img src="./tmp/logos/logos-2.png" alt=""></div>
+                                        <div class="calendar__text">
+                                            <p>Учительский курс <br>(1 семинар 1 год)</p>
+                                            <div class="calendar__text__name"> <strong>В. Литвинов</strong></div>
+                                        </div>
+                                        <div class="calendar__button"><i class="zmdi zmdi-chevron-down"></i><i class="zmdi zmdi-chevron-up"></i></div>
+                                    </div>
+                                    <div class="calendar__block">
+                                        <div class="calendar__number">2</div>
+                                        <div class="calendar__img"><img src="./tmp/logos/logos-1.png" alt=""></div>
+                                        <div class="calendar__text">
+                                            <p>Учительский курс <br>(1 семинар 1 год)</p>
+                                            <div class="calendar__text__name"> <strong>В. Литвинов</strong></div>
+                                        </div>
+                                        <div class="calendar__button"><i class="zmdi zmdi-chevron-down"></i><i class="zmdi zmdi-chevron-up"></i></div>
+                                    </div>
+                                    <div class="calendar__block">
+                                        <div class="calendar__number">3</div>
+                                        <div class="calendar__img"><img src="./tmp/logos/logos-2.png" alt=""></div>
+                                        <div class="calendar__text">
+                                            <p>Учительский курс <br>(1 семинар 1 год)</p>
+                                            <div class="calendar__text__name"> <strong>В. Литвинов</strong></div>
+                                        </div>
+                                        <div class="calendar__button"><i class="zmdi zmdi-chevron-down"></i><i class="zmdi zmdi-chevron-up"></i></div>
+                                    </div>
+                                    <div class="calendar__block">
+                                        <div class="calendar__number">4</div>
+                                        <div class="calendar__img"><img src="./tmp/logos/logos-1.png" alt=""></div>
+                                        <div class="calendar__text">
+                                            <p>Учительский курс <br>(1 семинар 1 год)</p>
+                                            <div class="calendar__text__name"> <strong>В. Литвинов</strong></div>
+                                        </div>
+                                        <div class="calendar__button"><i class="zmdi zmdi-chevron-down"></i><i class="zmdi zmdi-chevron-up"></i></div>
+                                    </div>
+                                    <div class="calendar__block">
+                                        <div class="calendar__number">5</div>
+                                        <div class="calendar__img"><img src="./tmp/logos/logos-2.png" alt=""></div>
+                                        <div class="calendar__text">
+                                            <p>Учительский курс <br>(1 семинар 1 год)</p>
+                                            <div class="calendar__text__name"> <strong>В. Литвинов</strong></div>
+                                        </div>
+                                        <div class="calendar__button"><i class="zmdi zmdi-chevron-down"></i><i class="zmdi zmdi-chevron-up"></i></div>
+                                    </div>
+                                    <div class="calendar__block last">
+                                        <div class="calendar__number">6</div>
+                                        <div class="calendar__img"><img src="./tmp/logos/logos-1.png" alt=""></div>
+                                        <div class="calendar__text">
+                                            <p>Учительский курс <br>(1 семинар 1 год)</p>
+                                            <div class="calendar__text__name"> <strong>В. Литвинов</strong></div>
+                                        </div>
+                                        <div class="calendar__button"><i class="zmdi zmdi-chevron-down"></i><i class="zmdi zmdi-chevron-up"></i></div>
+                                    </div>
+                                </div>
+                                <div class="calendar__event">
+                                    <div class="calendar__event__body"></div>
+                                </div>
+                                <div class="calendar__row two">
+                                    <div class="calendar__block">
+                                        <div class="calendar__number">7</div>
+                                        <div class="calendar__img"><img src="./tmp/logos/logos-1.png" alt=""></div>
+                                        <div class="calendar__text">
+                                            <p>Учительский курс <br>(1 семинар 1 год)</p>
+                                            <div class="calendar__text__name"> <strong>В. Литвинов</strong></div>
+                                        </div>
+                                        <div class="calendar__button"><i class="zmdi zmdi-chevron-down"></i><i class="zmdi zmdi-chevron-up"></i></div>
+                                    </div>
+                                    <div class="calendar__block">
+                                        <div class="calendar__number">8</div>
+                                        <div class="calendar__img"><img src="./tmp/logos/logos-2.png" alt=""></div>
+                                        <div class="calendar__text">
+                                            <p>Учительский курс <br>(1 семинар 1 год)</p>
+                                            <div class="calendar__text__name"> <strong>В. Литвинов</strong></div>
+                                        </div>
+                                        <div class="calendar__button"><i class="zmdi zmdi-chevron-down"></i><i class="zmdi zmdi-chevron-up"></i></div>
+                                    </div>
+                                    <div class="calendar__block">
+                                        <div class="calendar__number">9</div>
+                                        <div class="calendar__img"><img src="./tmp/logos/logos-1.png" alt=""></div>
+                                        <div class="calendar__text">
+                                            <p>Учительский курс <br>(1 семинар 1 год)</p>
+                                            <div class="calendar__text__name"> <strong>В. Литвинов</strong></div>
+                                        </div>
+                                        <div class="calendar__button"><i class="zmdi zmdi-chevron-down"></i><i class="zmdi zmdi-chevron-up"></i></div>
+                                    </div>
+                                    <div class="calendar__block">
+                                        <div class="calendar__number">10</div>
+                                        <div class="calendar__img"><img src="./tmp/logos/logos-2.png" alt=""></div>
+                                        <div class="calendar__text">
+                                            <p>Учительский курс <br>(1 семинар 1 год)</p>
+                                            <div class="calendar__text__name"> <strong>В. Литвинов</strong></div>
+                                        </div>
+                                        <div class="calendar__button"><i class="zmdi zmdi-chevron-down"></i><i class="zmdi zmdi-chevron-up"></i></div>
+                                    </div>
+                                    <div class="calendar__block enabled active">
+                                        <div class="calendar__number">11</div>
+                                        <div class="calendar__img"><img src="./tmp/logos/logos-1.png" alt=""></div>
+                                        <div class="calendar__text">
+                                            <p>Учительский курс <br>(1 семинар 1 год)</p>
+                                            <div class="calendar__text__name"> <strong>В. Литвинов</strong></div>
+                                        </div>
+                                        <div class="calendar__button"><i class="zmdi zmdi-chevron-down"></i><i class="zmdi zmdi-chevron-up"></i></div>
+                                    </div>
+                                    <div class="calendar__block enabled">
+                                        <div class="calendar__number">12</div>
+                                        <div class="calendar__img"><img src="./tmp/logos/logos-2.png" alt=""></div>
+                                        <div class="calendar__text">
+                                            <p>Учительский курс <br>(1 семинар 1 год)</p>
+                                            <div class="calendar__text__name"> <strong>В. Литвинов</strong></div>
+                                        </div>
+                                        <div class="calendar__button"><i class="zmdi zmdi-chevron-down"></i><i class="zmdi zmdi-chevron-up"></i></div>
+                                    </div>
+                                    <div class="calendar__block last enabled">
+                                        <div class="calendar__number">13</div>
+                                        <div class="calendar__img"><img src="./tmp/logos/logos-1.png" alt=""><img src="./tmp/logos/logos-2.png" alt=""></div>
+                                        <div class="calendar__text">
+                                            <p>Учительский курс <br>(1 семинар 1 год)</p>
+                                            <div class="calendar__text__name"> <strong>В. Литвинов</strong></div>
+                                        </div>
+                                        <div class="calendar__button"><i class="zmdi zmdi-chevron-down"></i><i class="zmdi zmdi-chevron-up"></i></div>
+                                    </div>
+                                </div>
+                                <div style="display: block;" class="calendar__event">
+                                    <div style="display: block" class="calendar__event__body">
+                                        <div class="calendar__event__row">
+                                            <div class="row">
+                                                <div class="col-md-2 col-sm-3 col-xs-4">
+                                                    <div class="news__date calendar__event__date"><strong>11-13</strong><span>февраля 2016 </span>
+                                                        <hr class="separator"><small>Стаж практики<br>&nbsp;от 2 лет</small>
+                                                    </div>
+                                                </div>
+                                                <div class="col-md-10 col-sm-9 col-xs-8">
+                                                    <div class="calendar__event__text">
+                                                        <div class="h1">Учительский курс (1 семинар 1 год)</div>
+                                                        <p class="calendar__event__introtext"><em>Харьков, спортивный комплекс Унифехт</em></p>
+                                                        <div class="hidden-xs">
+                                                            <h3> <strong>Преподаватель: Виталий Литвинов</strong></h3>
+                                                            <p>Контакты организатора: Лилия Полякова, +38 (073) 063 05 09, yoga@bksiyengar.com.ua</p>
+                                                            <p>Стоимость: 2 500 UAH / семинар, 6 600 UAH / год</p>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="row visible-xs">
+                                                <div class="col-xs-12">
+                                                    <div class="calendar__event__text mobile">
+                                                        <h3> <strong>Преподаватель: Виталий Литвинов</strong></h3>
+                                                        <p>Контакты организатора: Лилия Полякова, +38 (073) 063 05 09, yoga@bksiyengar.com.ua</p>
+                                                        <p>Стоимость: 2 500 UAH / семинар, 6 600 UAH / год</p>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="calendar__event__row">
+                                            <div class="row">
+                                                <div class="col-md-2 col-sm-3 col-xs-4">
+                                                    <div class="news__date calendar__event__date"><strong>11-13</strong><span>марта 2016 </span>
+                                                        <hr class="separator"><small>Стаж практики<br>&nbsp;от 2 лет</small>
+                                                    </div>
+                                                </div>
+                                                <div class="col-md-10 col-sm-9 col-xs-8">
+                                                    <div class="calendar__event__text">
+                                                        <div class="h1">Учительский курс (1 семинар 1 год)</div>
+                                                        <p class="calendar__event__introtext"><em>Харьков, спортивный комплекс Унифехт</em></p>
+                                                        <div class="hidden-xs">
+                                                            <h3> <strong>Преподаватель: Виталий Литвинов</strong></h3>
+                                                            <p>Контакты организатора: Лилия Полякова, +38 (073) 063 05 09, yoga@bksiyengar.com.ua</p>
+                                                            <p>Стоимость: 2 500 UAH / семинар, 6 600 UAH / год</p>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="row visible-xs">
+                                                <div class="col-xs-12">
+                                                    <div class="calendar__event__text mobile">
+                                                        <h3> <strong>Преподаватель: Виталий Литвинов</strong></h3>
+                                                        <p>Контакты организатора: Лилия Полякова, +38 (073) 063 05 09, yoga@bksiyengar.com.ua</p>
+                                                        <p>Стоимость: 2 500 UAH / семинар, 6 600 UAH / год</p>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div style="display: block" class="calendar__event__body">
+                                        <div class="calendar__event__row">
+                                            <div class="row">
+                                                <div class="col-md-2 col-sm-3 col-xs-4">
+                                                    <div class="news__date calendar__event__date"><strong>11-13</strong><span>февраля 2016 </span>
+                                                        <hr class="separator"><small>Стаж практики<br>&nbsp;от 2 лет</small>
+                                                    </div>
+                                                </div>
+                                                <div class="col-md-10 col-sm-9 col-xs-8">
+                                                    <div class="calendar__event__text">
+                                                        <div class="h1">Учительский курс (1 семинар 1 год)</div>
+                                                        <p class="calendar__event__introtext"><em>Харьков, спортивный комплекс Унифехт</em></p>
+                                                        <div class="hidden-xs">
+                                                            <h3> <strong>Преподаватель: Виталий Литвинов</strong></h3>
+                                                            <p>Контакты организатора: Лилия Полякова, +38 (073) 063 05 09, yoga@bksiyengar.com.ua</p>
+                                                            <p>Стоимость: 2 500 UAH / семинар, 6 600 UAH / год</p>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="row visible-xs">
+                                                <div class="col-xs-12">
+                                                    <div class="calendar__event__text mobile">
+                                                        <h3> <strong>Преподаватель: Виталий Литвинов</strong></h3>
+                                                        <p>Контакты организатора: Лилия Полякова, +38 (073) 063 05 09, yoga@bksiyengar.com.ua</p>
+                                                        <p>Стоимость: 2 500 UAH / семинар, 6 600 UAH / год</p>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="calendar__event__row">
+                                            <div class="row">
+                                                <div class="col-md-2 col-sm-3 col-xs-4">
+                                                    <div class="news__date calendar__event__date"><strong>11-13</strong><span>марта 2016 </span>
+                                                        <hr class="separator"><small>Стаж практики<br>&nbsp;от 2 лет</small>
+                                                    </div>
+                                                </div>
+                                                <div class="col-md-10 col-sm-9 col-xs-8">
+                                                    <div class="calendar__event__text">
+                                                        <div class="h1">Учительский курс (1 семинар 1 год)</div>
+                                                        <p class="calendar__event__introtext"><em>Харьков, спортивный комплекс Унифехт</em></p>
+                                                        <div class="hidden-xs">
+                                                            <h3> <strong>Преподаватель: Виталий Литвинов</strong></h3>
+                                                            <p>Контакты организатора: Лилия Полякова, +38 (073) 063 05 09, yoga@bksiyengar.com.ua</p>
+                                                            <p>Стоимость: 2 500 UAH / семинар, 6 600 UAH / год</p>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="row visible-xs">
+                                                <div class="col-xs-12">
+                                                    <div class="calendar__event__text mobile">
+                                                        <h3> <strong>Преподаватель: Виталий Литвинов</strong></h3>
+                                                        <p>Контакты организатора: Лилия Полякова, +38 (073) 063 05 09, yoga@bksiyengar.com.ua</p>
+                                                        <p>Стоимость: 2 500 UAH / семинар, 6 600 UAH / год</p>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="calendar__row three">
+                                    <div class="calendar__block">
+                                        <div class="calendar__number">14</div>
+                                        <div class="calendar__img"><img src="./tmp/logos/logos-1.png" alt=""></div>
+                                        <div class="calendar__text">
+                                            <p>Учительский курс <br>(1 семинар 1 год)</p>
+                                            <div class="calendar__text__name"> <strong>В. Литвинов</strong></div>
+                                        </div>
+                                        <div class="calendar__button"><i class="zmdi zmdi-chevron-down"></i><i class="zmdi zmdi-chevron-up"></i></div>
+                                    </div>
+                                    <div class="calendar__block">
+                                        <div class="calendar__number">15</div>
+                                        <div class="calendar__img"><img src="./tmp/logos/logos-2.png" alt=""></div>
+                                        <div class="calendar__text">
+                                            <p>Учительский курс <br>(1 семинар 1 год)</p>
+                                            <div class="calendar__text__name"> <strong>В. Литвинов</strong></div>
+                                        </div>
+                                        <div class="calendar__button"><i class="zmdi zmdi-chevron-down"></i><i class="zmdi zmdi-chevron-up"></i></div>
+                                    </div>
+                                    <div class="calendar__block">
+                                        <div class="calendar__number">16</div>
+                                        <div class="calendar__img"><img src="./tmp/logos/logos-1.png" alt=""></div>
+                                        <div class="calendar__text">
+                                            <p>Учительский курс <br>(1 семинар 1 год)</p>
+                                            <div class="calendar__text__name"> <strong>В. Литвинов</strong></div>
+                                        </div>
+                                        <div class="calendar__button"><i class="zmdi zmdi-chevron-down"></i><i class="zmdi zmdi-chevron-up"></i></div>
+                                    </div>
+                                    <div class="calendar__block">
+                                        <div class="calendar__number">17</div>
+                                        <div class="calendar__img"><img src="./tmp/logos/logos-2.png" alt=""></div>
+                                        <div class="calendar__text">
+                                            <p>Учительский курс <br>(1 семинар 1 год)</p>
+                                            <div class="calendar__text__name"> <strong>В. Литвинов</strong></div>
+                                        </div>
+                                        <div class="calendar__button"><i class="zmdi zmdi-chevron-down"></i><i class="zmdi zmdi-chevron-up"></i></div>
+                                    </div>
+                                    <div class="calendar__block">
+                                        <div class="calendar__number">18</div>
+                                        <div class="calendar__img"><img src="./tmp/logos/logos-1.png" alt=""></div>
+                                        <div class="calendar__text">
+                                            <p>Учительский курс <br>(1 семинар 1 год)</p>
+                                            <div class="calendar__text__name"> <strong>В. Литвинов</strong></div>
+                                        </div>
+                                        <div class="calendar__button"><i class="zmdi zmdi-chevron-down"></i><i class="zmdi zmdi-chevron-up"></i></div>
+                                    </div>
+                                    <div class="calendar__block">
+                                        <div class="calendar__number">19</div>
+                                        <div class="calendar__img"><img src="./tmp/logos/logos-2.png" alt=""></div>
+                                        <div class="calendar__text">
+                                            <p>Учительский курс <br>(1 семинар 1 год)</p>
+                                            <div class="calendar__text__name"> <strong>В. Литвинов</strong></div>
+                                        </div>
+                                        <div class="calendar__button"><i class="zmdi zmdi-chevron-down"></i><i class="zmdi zmdi-chevron-up"></i></div>
+                                    </div>
+                                    <div class="calendar__block last">
+                                        <div class="calendar__number">20</div>
+                                        <div class="calendar__img"><img src="./tmp/logos/logos-1.png" alt=""></div>
+                                        <div class="calendar__text">
+                                            <p>Учительский курс <br>(1 семинар 1 год)</p>
+                                            <div class="calendar__text__name"> <strong>В. Литвинов</strong></div>
+                                        </div>
+                                        <div class="calendar__button"><i class="zmdi zmdi-chevron-down"></i><i class="zmdi zmdi-chevron-up"></i></div>
+                                    </div>
+                                </div>
+                                <div class="calendar__event">
+                                    <div class="calendar__event__body"></div>
+                                </div>
+                                <div class="calendar__row four">
+                                    <div class="calendar__block">
+                                        <div class="calendar__number">21</div>
+                                        <div class="calendar__img"><img src="./tmp/logos/logos-1.png" alt=""></div>
+                                        <div class="calendar__text">
+                                            <p>Учительский курс <br>(1 семинар 1 год)</p>
+                                            <div class="calendar__text__name"> <strong>В. Литвинов</strong></div>
+                                        </div>
+                                        <div class="calendar__button"><i class="zmdi zmdi-chevron-down"></i><i class="zmdi zmdi-chevron-up"></i></div>
+                                    </div>
+                                    <div class="calendar__block">
+                                        <div class="calendar__number">22</div>
+                                        <div class="calendar__img"><img src="./tmp/logos/logos-2.png" alt=""></div>
+                                        <div class="calendar__text">
+                                            <p>Учительский курс <br>(1 семинар 1 год)</p>
+                                            <div class="calendar__text__name"> <strong>В. Литвинов</strong></div>
+                                        </div>
+                                        <div class="calendar__button"><i class="zmdi zmdi-chevron-down"></i><i class="zmdi zmdi-chevron-up"></i></div>
+                                    </div>
+                                    <div class="calendar__block">
+                                        <div class="calendar__number">23</div>
+                                        <div class="calendar__img"><img src="./tmp/logos/logos-1.png" alt=""></div>
+                                        <div class="calendar__text">
+                                            <p>Учительский курс <br>(1 семинар 1 год)</p>
+                                            <div class="calendar__text__name"> <strong>В. Литвинов</strong></div>
+                                        </div>
+                                        <div class="calendar__button"><i class="zmdi zmdi-chevron-down"></i><i class="zmdi zmdi-chevron-up"></i></div>
+                                    </div>
+                                    <div class="calendar__block">
+                                        <div class="calendar__number">24</div>
+                                        <div class="calendar__img"><img src="./tmp/logos/logos-2.png" alt=""></div>
+                                        <div class="calendar__text">
+                                            <p>Учительский курс <br>(1 семинар 1 год)</p>
+                                            <div class="calendar__text__name"> <strong>В. Литвинов</strong></div>
+                                        </div>
+                                        <div class="calendar__button"><i class="zmdi zmdi-chevron-down"></i><i class="zmdi zmdi-chevron-up"></i></div>
+                                    </div>
+                                    <div class="calendar__block">
+                                        <div class="calendar__number">25</div>
+                                        <div class="calendar__img"><img src="./tmp/logos/logos-1.png" alt=""></div>
+                                        <div class="calendar__text">
+                                            <p>Учительский курс <br>(1 семинар 1 год)</p>
+                                            <div class="calendar__text__name"> <strong>В. Литвинов</strong></div>
+                                        </div>
+                                        <div class="calendar__button"><i class="zmdi zmdi-chevron-down"></i><i class="zmdi zmdi-chevron-up"></i></div>
+                                    </div>
+                                    <div class="calendar__block enabled">
+                                        <div class="calendar__number">26</div>
+                                        <div class="calendar__img"><img src="./tmp/logos/logos-2.png" alt=""></div>
+                                        <div class="calendar__text">
+                                            <p>Семинар на тему «Здоровый позвоночник»</p>
+                                            <div class="calendar__text__name"> <strong>Е. Быстрова</strong></div>
+                                        </div>
+                                        <div class="calendar__button"><i class="zmdi zmdi-chevron-down"></i><i class="zmdi zmdi-chevron-up"></i></div>
+                                    </div>
+                                    <div class="calendar__block last enabled">
+                                        <div class="calendar__number">27</div>
+                                        <div class="calendar__img"><img src="./tmp/logos/logos-1.png" alt=""></div>
+                                        <div class="calendar__text">
+                                            <p>Семинар на тему «Здоровый позвоночник»</p>
+                                            <div class="calendar__text__name"> <strong>Е. Быстрова</strong></div>
+                                        </div>
+                                        <div class="calendar__button"><i class="zmdi zmdi-chevron-down"></i><i class="zmdi zmdi-chevron-up"></i></div>
+                                    </div>
+                                </div>
+                                <div class="calendar__event">
+                                    <div class="calendar__event__body"></div>
+                                </div>
+                                <div class="calendar__row five">
+                                    <div class="calendar__block">
+                                        <div class="calendar__number">28</div>
+                                        <div class="calendar__img"><img src="./tmp/logos/logos-1.png" alt=""></div>
+                                        <div class="calendar__text">
+                                            <p>Учительский курс <br>(1 семинар 1 год)</p>
+                                            <div class="calendar__text__name"> <strong>В. Литвинов</strong></div>
+                                        </div>
+                                        <div class="calendar__button"><i class="zmdi zmdi-chevron-down"></i><i class="zmdi zmdi-chevron-up"></i></div>
+                                    </div>
+                                    <div class="calendar__block">
+                                        <div class="calendar__number">29</div>
+                                        <div class="calendar__img"><img src="./tmp/logos/logos-2.png" alt=""></div>
+                                        <div class="calendar__text">
+                                            <p>Учительский курс <br>(1 семинар 1 год)</p>
+                                            <div class="calendar__text__name"> <strong>В. Литвинов</strong></div>
+                                        </div>
+                                        <div class="calendar__button"><i class="zmdi zmdi-chevron-down"></i><i class="zmdi zmdi-chevron-up"></i></div>
+                                    </div>
+                                    <div class="calendar__block">
+                                        <div class="calendar__number">30</div>
+                                        <div class="calendar__img"><img src="./tmp/logos/logos-1.png" alt=""></div>
+                                        <div class="calendar__text">
+                                            <p>Учительский курс <br>(1 семинар 1 год)</p>
+                                            <div class="calendar__text__name"> <strong>В. Литвинов</strong></div>
+                                        </div>
+                                        <div class="calendar__button"><i class="zmdi zmdi-chevron-down"></i><i class="zmdi zmdi-chevron-up"></i></div>
+                                    </div>
+                                    <div class="calendar__block">
+                                        <div class="calendar__number">31</div>
+                                        <div class="calendar__img"><img src="./tmp/logos/logos-2.png" alt=""></div>
+                                        <div class="calendar__text">
+                                            <p>Учительский курс <br>(1 семинар 1 год)</p>
+                                            <div class="calendar__text__name"> <strong>В. Литвинов</strong></div>
+                                        </div>
+                                        <div class="calendar__button"><i class="zmdi zmdi-chevron-down"></i><i class="zmdi zmdi-chevron-up"></i></div>
+                                    </div>
+                                    <div class="calendar__block disabled">
+                                        <div class="calendar__number">1</div>
+                                        <div class="calendar__img"><img src="./tmp/logos/logos-1.png" alt=""></div>
+                                        <div class="calendar__text">
+                                            <p>Учительский курс <br>(1 семинар 1 год)</p>
+                                            <div class="calendar__text__name"> <strong>В. Литвинов</strong></div>
+                                        </div>
+                                        <div class="calendar__button"><i class="zmdi zmdi-chevron-down"></i><i class="zmdi zmdi-chevron-up"></i></div>
+                                    </div>
+                                    <div class="calendar__block disabled">
+                                        <div class="calendar__number">2</div>
+                                        <div class="calendar__img"><img src="./tmp/logos/logos-2.png" alt=""></div>
+                                        <div class="calendar__text">
+                                            <p>Семинар на тему «Здоровый позвоночник»</p>
+                                            <div class="calendar__text__name"> <strong>Е. Быстрова</strong></div>
+                                        </div>
+                                        <div class="calendar__button"><i class="zmdi zmdi-chevron-down"></i><i class="zmdi zmdi-chevron-up"></i></div>
+                                    </div>
+                                    <div class="calendar__block last disabled">
+                                        <div class="calendar__number">3</div>
+                                        <div class="calendar__img"><img src="./tmp/logos/logos-1.png" alt=""></div>
+                                        <div class="calendar__text">
+                                            <p>Семинар на тему «Здоровый позвоночник»</p>
+                                            <div class="calendar__text__name"> <strong>Е. Быстрова</strong></div>
+                                        </div>
+                                        <div class="calendar__button"><i class="zmdi zmdi-chevron-down"></i><i class="zmdi zmdi-chevron-up"></i></div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div><!-- Footer -->
+            <footer class="footer">
+                <div class="footer__top section">
+                    <div class="container">
+                        <div class="row">
+                            <div class="col-md-9 col-sm-6">
+                                <nav>
+                                    <ul>
+                                        <li><a href="#"> <i class="zmdi zmdi-chevron-down"></i><i class="zmdi zmdi-chevron-up"></i>Новости</a>
+                                            <ul>
+                                                <li><a href="#">Анонсы</a></li>
+                                                <li><a href="#">Акции</a></li>
+                                                <li><a href="#">События</a></li>
+                                            </ul>
+                                        </li>
+                                        <li><a href="#"> <i class="zmdi zmdi-chevron-down"></i><i class="zmdi zmdi-chevron-up"></i>Преподаватели</a>
+                                            <ul>
+                                                <li><a href="#">Реестр преподавателей</a></li>
+                                                <li><a href="#">Как стать преподавателем</a></li>
+                                                <li><a href="#">Список курсов</a></li>
+                                            </ul>
+                                        </li>
+                                        <li><a href="#"> <i class="zmdi zmdi-chevron-down"></i><i class="zmdi zmdi-chevron-up"></i>Информация</a>
+                                            <ul>
+                                                <li><a href="#">Реестр преподавателей</a></li>
+                                                <li><a href="#">Как стать преподавателем</a></li>
+                                                <li><a href="#">Список курсов</a></li>
+                                            </ul>
+                                        </li>
+                                        <li><a href="#"> <i class="zmdi zmdi-chevron-down"></i><i class="zmdi zmdi-chevron-up"></i>Центры</a>
+                                            <ul>
+                                                <li><a href="#">Киев</a></li>
+                                                <li><a href="#">Днепропетровск</a></li>
+                                                <li><a href="#">Львов</a></li>
+                                            </ul>
+                                        </li>
+                                    </ul>
+                                </nav>
+                            </div>
+                            <div class="col-md-3 col-sm-6">
+                                <div class="footer__contacts">
+                                    <p>Контакты</p>
+                                    <div class="footer__contacts__block"><i class="zmdi zmdi-phone"></i><span>+38 (057) 123 45 69</span></div>
+                                    <div class="footer__contacts__block"><i class="zmdi zmdi-pin-drop"></i><span>Харьков, пер. Костюринский 2 </span></div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="footer__bottom">
+                    <div class="container">
+                        <div class="row">
+                            <div class="col-sm-6 col-sm-push-6 col-xs-12">
+                                <div class="social footer__social"><a href="#"><i class="zmdi zmdi-facebook"></i></a><a href="#"><i class="zmdi zmdi-vk"></i></a><a href="#"><i class="zmdi zmdi-twitter"></i></a><a href="#"><i class="zmdi zmdi-google-plus"></i></a></div>
+                            </div>
+                            <div class="col-sm-6 col-sm-pull-6 col-xs-12">
+                                <div class="copyright">&copy; K. B. S. Iyengar Ukraine</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </footer>
+            <!--[if gte IE 9]
+            <script src='./js/libs/html5shiv/es5-shim.min.js'>
+            <script src='./js/libs/html5shiv/html5shiv.min.js'>
+            <script src='./js/libs/html5shiv/html5shiv-printshiv.min.js'>
+            <script src='./js/libs/respond/respond.min.js'><![endif]
+            
+            -->
+            <script src="./js/libs/jquery/jquery-2.1.4.min.js"></script>
+            <script src="./js/libs/jquery/jquery-migrate-1.2.1.min.js"></script>
+            <script src="./js/libs/modernizr/modernizr.js"></script>
+            <script src="./js/libs/plugins-scroll/plugins-scroll.js"></script><!-- Footer js -->
+            <script src="./js/libs/owl.carousel/owl.carousel.min.js"></script>
+            <script src="./js/libs/malihu-custom-scrollbar-plugin/jquery.mCustomScrollbar.concat.min.js"></script>
+            <script src="./js/libs/bootstrap/collapse.js"></script>
+            <script src="./js/libs/bootstrap/transition.js"></script>
+            <script src="./js/libs/slideout.js/dist/slideout.js"></script>
+            <script src="./js/libs/jQueryFormStyler-master/jquery.formstyler.min.js"></script>
+            <script src="./js/libs/tooltipster/js/jquery.tooltipster.min.js"></script>
+            <script src="./js/common.js"></script>
+        </div>
+        <div id="back-top"><i class="zmdi zmdi-long-arrow-up"></i></div>
+    </body>
+</html>

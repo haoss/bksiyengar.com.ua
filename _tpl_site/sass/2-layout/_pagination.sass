@@ -1,0 +1,31 @@
+.pagination
+  &__row
+    padding: 30px 0 0 0
+    text-align: center
+
+ul.pagination, ul.pagination li
+  padding: 0
+  margin: 0
+  list-style: none
+ul.pagination
+  text-align: center
+  li
+    display: inline-block
+    font-size: 24px
+    font-family: 'OpenSansSemiBold'
+    a
+      display: inline-block
+      padding: 0 5px
+      height: 36px
+      line-height: 36px
+      color: $primary-color
+      text-decoration: none
+      min-width: 36px
+      &:hover
+        color: $color-blue
+        background-color: lighten($color-gray, 20%)
+
+    &.active
+      a
+        color: $color-blue
+        text-decoration: none

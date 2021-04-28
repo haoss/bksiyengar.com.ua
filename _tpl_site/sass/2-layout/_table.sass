@@ -1,0 +1,39 @@
+.table
+  width: 100%
+  font-size: rem(16)
+  color: $primary-color
+
+  th, td
+    padding: 20px 20px
+
+  th
+    color: $color-white
+    background-color: $color-blue
+    text-align: center
+    font-weight: normal
+    font-family: 'OpenSansSemiBold'
+    border-right: 1px solid #00578f
+    padding: 10px
+    box-shadow: -1px 0 0 0px #007bca inset
+    &:last-child
+      border-right-color: $color-blue
+      box-shadow: inherit
+
+  td
+    background-color: #fff
+    border: 1px solid #d5d5d5
+
+  tr
+    &:nth-child(2n)
+      td
+        background-color: #f6f6f6
+    &:first-child
+      td
+        border-top: 0
+
+  &--name
+    font-weight: normal
+    font-family: 'OpenSansRegular', sans-serif
+
+.td-number
+  text-align: center

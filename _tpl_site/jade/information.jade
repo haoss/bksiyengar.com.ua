@@ -1,0 +1,146 @@
+doctype
+
+html(lang="ru")
+  
+  -var active = 'Информация' //активный пункт меню, список в header.jade
+  -var pageTitle = 'Информация' + ' - B.K.S.Iyengar Ukraine' //title страницы для генерации верстки  
+  -var navigation = { 'Главная': '#', 'Новости': '#', 'Преподаватели': '#', 'Информация': '#', 'Календарь': '#', 'Центры': '#', 'Контакты': '#' };
+
+  head
+    include ./_include/_head
+
+  body
+    
+    <!-- Preloader -->
+    .loader
+      .loader__block
+    
+    nav#menu.navigation(role="navigation")
+      .lang
+        ul
+          li.active: a(href="#") Рус
+          li: a(href="#") Укр
+          
+      ul
+        each val, key in navigation
+          if active === key
+            li.active
+              a(href=val, title=key)= key
+          else
+            li
+              a(href=val, title=key)= key
+    
+    #base.base
+      include ./_include/_header
+      
+      .content
+        
+        .section
+          .container
+            
+            .section__header
+              h1 Список асан и пранаям
+              
+            .row
+              .col-md-3
+                
+                nav.navigation__category
+                  .hidden-xs.hidden-sm
+                    ul.navigation__category__ul
+                      li: a(href="#") Как стать преподавателем
+                      li: a(href="#") Список официальных курсов
+                      li: a(href="#") Расписание экзаменов
+                      li: a(href="#") Порядок проведения экзаменов
+                      li.active: a(href="#") Список асан и пранаям
+                  
+                  .visible-xs.visible-sm  
+                    select.navigation__category__select.styler
+                      option(value="Как стать преподавателем" selected) Как стать преподавателем
+                      option(value="Список официальных курсов") Список официальных курсов
+                      option(value="Расписание экзаменов") Расписание экзаменов
+                      option(value="Порядок проведения экзаменов") Порядок проведения экзаменов
+                      option(value="Список асан и пранаям") Список асан и пранаям
+                
+              .col-md-9
+                
+                .row
+                  .col-sm-4
+                    a(href="#").category__block
+                      .category__img
+                        img(src="./tmp/information/info-1.jpg", alt="").img-responsive
+                      .category__title Тадасана
+                      
+                  .col-sm-4
+                    a(href="#").category__block
+                      .category__img
+                        img(src="./tmp/information/info-2.jpg", alt="").img-responsive
+                      .category__title Врикшасана 
+                      
+                  .col-sm-4
+                    a(href="#").category__block
+                      .category__img
+                        img(src="./tmp/information/info-3.jpg", alt="").img-responsive
+                      .category__title Уткатасана
+                      
+                  .col-sm-4
+                    a(href="#").category__block
+                      .category__img
+                        img(src="./tmp/information/info-4.jpg", alt="").img-responsive
+                      .category__title Уттхита Триконасана  Уттхита Триконасана  Уттхита Триконасана 
+                      
+                  .col-sm-4
+                    a(href="#").category__block
+                      .category__img
+                        img(src="./tmp/information/info-5.jpg", alt="").img-responsive
+                      .category__title Уттхита Паршваконасана 
+                      
+                  .col-sm-4
+                    a(href="#").category__block
+                      .category__img
+                        img(src="./tmp/information/info-6.jpg", alt="").img-responsive
+                      .category__title Вирабхадрасана 1 
+                      
+                  .col-sm-4
+                    a(href="#").category__block
+                      .category__img
+                        img(src="./tmp/information/info-7.jpg", alt="").img-responsive
+                      .category__title Вирабхадрасана 2
+                      
+                  .col-sm-4
+                    a(href="#").category__block
+                      .category__img
+                        img(src="./tmp/information/info-8.jpg", alt="").img-responsive
+                      .category__title Ардха Чандрасана 
+                      
+                  .col-sm-4
+                    a(href="#").category__block
+                      .category__img
+                        img(src="./tmp/information/info-9.jpg", alt="").img-responsive
+                      .category__title Уттанасана
+                      
+                .pagination__row
+                  ul.pagination
+                    li.active: a(href="#") 1
+                    li: a(href="#") 2
+                    li: a(href="#") 3
+                    li: a(href="#") 4
+                    li: a(href="#") 5
+      
+      include ./_include/_footer
+      //- div(style="height: 500px; background-color: #ccc")
+      
+      //[if gte IE 9]
+        <script src='./js/libs/html5shiv/es5-shim.min.js'>
+        <script src='./js/libs/html5shiv/html5shiv.min.js'>
+        <script src='./js/libs/html5shiv/html5shiv-printshiv.min.js'>
+        <script src='./js/libs/respond/respond.min.js'><![endif]
+
+      script(src='./js/libs/jquery/jquery-2.1.4.min.js')
+      script(src='./js/libs/jquery/jquery-migrate-1.2.1.min.js')
+      script(src='./js/libs/modernizr/modernizr.js')
+      script(src='./js/libs/plugins-scroll/plugins-scroll.js')
+      include ./_include/_footer-js
+      script(src='./js/common.js')
+
+    #back-top
+      i.zmdi.zmdi-long-arrow-up

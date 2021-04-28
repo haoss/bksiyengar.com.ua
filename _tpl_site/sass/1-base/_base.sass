@@ -1,0 +1,264 @@
+*
+  box-sizing: border-box
+
+//  Typography
+.h1, .h2, .h3, .h4, .h5, .h6, h1, h2, h3, h4, h5, h6
+  color: $color-blue
+  font-weight: normal
+  font-family: 'OpenSansRegular'
+  text-decoration: none
+  margin: 0 0 20px 0
+
+.h1, h1
+  font-size: rem(26)
+  line-height: 1.2
+  letter-spacing: -1px
+  color: $color-blue
+
+.h2, h2
+  font-size: rem(20)
+  line-height: 1.14
+
+.h3, h3
+  font-size: rem(16)
+  line-height: 1.38
+
+.h4, h4
+  font-size: rem(14)
+  line-height: 1.38
+
+.h5, h5
+  font-size: rem(13)
+
+.h6, h6
+  font-size: rem(12)
+
+.small, small
+  font-size: rem(12)
+  line-height: 1.2
+
+p
+  margin: 0 0 15px 0
+  line-height: 24px
+
+em
+  font-style: normal
+  font-family: 'OpenSansItalic'
+
+strong
+  font-weight: normal
+  font-family: 'OpenSansSemiBold'
+
+hr
+  border: solid #ddd
+  border-width: 1px 0 0
+  clear: both
+  margin: 10px 0 30px
+  height: 0
+
+// Links
+a
+  color: $link-color
+  text-decoration: underline
+  outline: 0
+  transition: color 0.3s linear, background-color 0.3s linear
+
+a:hover, a:focus, a:active
+  color: lighten($link-color, 10%)
+  text-decoration: underline
+  outline: none
+
+.link
+  text-decoration: underline
+  i
+    margin-left: 10px
+    font-size: rem(18)
+    vertical-align: middle
+  &--reverse
+    text-decoration: none
+
+  &--back
+    i
+      margin-right: 20px
+      font-size: 16px
+      font-weight: bold
+      margin-left: 0
+      &.zmdi-arrow-left
+        vertical-align: inherit
+
+a:hover.link
+  text-decoration: none
+  &--reverse
+    text-decoration: underline
+
+// Selection colors (easy to forget)
+// ::selection
+//   background: $selection-color
+// ::-moz-selection
+//   background: $selection-color
+// img::selection
+//   background: transparent
+// img::-moz-selection
+//   background: transparent
+
+body
+  // -webkit-tap-highlight-color: $selection-color
+
+
+// Basic Styles
+html
+  font-size: inherit
+  line-height: 1.3
+
+html,
+body
+  height: 100%
+  padding: 0
+  margin: 0
+
+body
+  background: #fff
+  font-size: rem(14)
+  font-family: 'OpenSansRegular', sans-serif
+  color: $primary-color
+  -webkit-font-smoothing: antialiased
+  -webkit-text-size-adjust: 100%
+
+.base
+  position: relative
+  background: #fff
+
+.container
+  margin: 0 auto
+  // width: 1280px
+  min-width: 320px
+
+.text
+  &-center
+    text-align: center
+  &-left
+    text-align: left
+  &-right
+    text-align: right
+
+.section
+  padding: 30px 0
+
+.img-responsive
+  display: block
+  height: auto
+  max-width: 100%
+
+.loader
+  width: 100%
+  height: 100%
+  left: 0
+  top: 0
+  position: fixed
+  z-index: 10000
+  background-color: #fff
+
+  &__block
+    &:before, &:after
+      border-radius: 50%
+      width: 25px
+      height: 25px
+      animation-fill-mode: both
+      animation: load7 1.8s infinite ease-in-out
+    border-radius: 50%
+    width: 25px
+    height: 25px
+    animation-fill-mode: both
+    animation: load7 1.8s infinite ease-in-out
+    font-size: 10px
+    margin: 0 auto
+    position: absolute
+    text-indent: -9999em
+    transform: translate(-50%, -50px)
+    animation-delay: -0.16s
+    top: 50%
+    left: 50%
+    &:before
+      left: -3.5em
+      animation-delay: -0.32s
+    &:after
+      left: 3.5em
+    &:before, &:after
+      content: ''
+      position: absolute
+      top: 0
+
+@-webkit-keyframes load7
+  0%,
+  80%,
+  100%
+    box-shadow: 0 2.5em 0 -1.3em lightskyblue
+
+  40%
+    box-shadow: 0 2.5em 0 0 lightskyblue
+
+
+@keyframes load7
+  0%,
+  80%,
+  100%
+    box-shadow: 0 2.5em 0 -1.3em lightskyblue
+
+  40%
+    box-shadow: 0 2.5em 0 0 lightskyblue
+
+.section
+  padding: 50px 0
+
+  &__header
+    text-align: center
+    margin-bottom: 50px
+    &:after
+      content: ''
+      width: 70px
+      height: 2px
+      background-color: $color-blue
+      margin: 0 auto
+      display: block
+    .h1,h1
+      margin: 0
+      color: $color-blue
+      text-transform: uppercase
+      padding-bottom: 15px
+      font-family: 'OpenSansSemiBold'
+  &--map
+    padding: 0 !important
+
+  &__centers
+    padding-top: 0
+
+
+.row--flex
+  display: flex
+
+.mCSB_scrollTools.mCSB_scrollTools_horizontal .mCSB_dragger .mCSB_dragger_bar
+  background-color: $color-blue
+  height: 4px
+  border-radius: 0
+
+.time
+  font-size: rem(14)
+  margin-bottom: 10px
+  display: block
+
+  &--gray
+    color: #bbbbbb
+
+.img
+  &--document
+    max-width: 360px
+    margin: 0 20px 20px 0
+    float: left
+    display: block
+    max-width: 100%
+    height: auto
+
+.list
+  padding-left: 20px
+  li
+    margin-bottom: 10px

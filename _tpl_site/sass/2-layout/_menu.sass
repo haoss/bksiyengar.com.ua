@@ -1,0 +1,239 @@
+.top__navigation
+  position: absolute
+  top: 60px
+  right: 0
+  font-size: rem(16)
+  font-family: 'OpenSansSemiBold'
+
+  ul, li
+    padding: 0
+    margin: 0
+    list-style: none
+  ul
+    li
+      float: left
+      list-style: none
+      a
+        color: $color-gray
+        text-decoration: none
+        display: block
+        position: relative
+        line-height: 1
+        margin: 0 15px
+        &:after
+          content: ''
+          position: absolute
+          bottom: -10px
+          left: 0%
+          height: 2px
+          width: 0%
+          background-color: $color-gray
+          transition: width 0.3s, opacity 0.6s linear
+          opacity: 0
+        &:hover
+          &:after
+            width: 100%
+            opacity: 1
+
+      &.active
+        a
+          color: $color-white
+          &:after
+            background-color: $color-white
+            width: 100%
+            opacity: 1
+
+.navigation
+  display: none
+  overflow: hidden
+  ul
+    height: 100%
+    display: flex
+    margin: 0
+    list-style: none
+    flex-direction: column
+    padding: 0
+    background-color: #3a3d42
+    padding-top: 45px
+    li
+      a
+        padding: 5px 10px 5px 34px
+        text-decoration: none
+        display: block
+        color: #fff
+        font-size: 15px
+        font-family: 'OpenSansSemiBold', sans-serif
+        color: #c1c1c1
+
+      &.active
+        a
+          //text-shadow: 0px 0px 1px rgba(0,0,0,.4)
+          color: $color-white
+
+  &__category
+    font-size: rem(18)
+    &__ul, li
+      margin: 0
+      padding: 0
+      list-style: none
+    &__ul
+      li
+        margin-bottom: 25px
+        a
+          color: $primary-color
+          text-decoration: none
+          &:hover
+            color: $color-blue-light
+        &.active
+          a
+            color: $color-blue
+
+.sandwich
+  width: 30px
+  height: 27px
+  position: absolute
+  top: 50px
+  right: 15px
+  margin: auto
+  padding: 5px
+  overflow: hidden
+  cursor: pointer
+  z-index: 100
+
+.sw-topper
+  position: relative
+  top: 0
+  width: 20px
+  height: 3px
+  background: rgb(255, 255, 255)
+  border: none
+  border-radius: 4px 4px 4px 4px
+  transition: transform 0.5s, top 0.2s
+
+.sw-bottom
+  position: relative
+  width: 20px
+  height: 3px
+  top: 4px
+  background: rgb(255, 255, 255)
+  border: none
+  border-radius: 4px 4px 4px 4px
+  transition: transform 0.5s, top 0.2s
+  transition-delay: 0.2s, 0s
+
+.sw-footer
+  position: relative
+  width: 20px
+  height: 3px
+  top: 8px
+  background: rgb(255, 255, 255)
+  border: none
+  border-radius: 4px 4px 4px 4px
+  transition: all 0.5s
+  transition-delay: 0.1s
+
+.sandwich.active
+  .sw-topper
+    top: 7px
+    transform: rotate(140deg)
+  .sw-bottom
+    top: 4px
+    transform: rotate(-140deg)
+  .sw-footer
+    opacity: 0
+    top: 0
+    transform: rotate(180deg)
+
+.sandwich--navigation
+  position: inherit
+
+.mm-menu > .mm-list
+  padding-top: 40px
+
+.mm-menu .sandwich
+  line-height: inherit
+  padding: 5px
+  right: 15px
+  position: absolute
+  top: -35px
+
+//
+.slideout-menu
+  position: fixed
+  top: 0
+  bottom: 0
+  right: 0
+  z-index: 0
+  width: 256px
+  overflow-y: auto
+  -webkit-overflow-scrolling: touch
+  display: none
+  left: auto
+
+.slideout-panel
+  position:relative
+  z-index: 1
+  will-change: transform
+
+.slideout-open,
+.slideout-open body,
+.slideout-open .slideout-panel
+  overflow: hidden
+
+
+.slideout-open .slideout-menu
+  display: block
+
+//
+.jq-selectbox
+  width: 100%
+  &__select
+    height: 36px
+    background: none
+    text-shadow: none
+    border-color: $color-blue
+    padding-left: 20px
+    padding-right: 60px
+    box-shadow: none
+    font-size: 16px
+    font-family: "OpenSansRegular",sans-serif
+    color: $color-blue
+    &:active, &:hover
+      background: none
+      box-shadow: none
+
+  &__trigger
+    border-left-color: $color-blue
+    width: 48px
+    &-arrow
+      border: 0
+      font: normal normal normal 26px/1 'Material-Design-Iconic-Font'
+      line-height: 0.5
+      top: 5px
+      right: 30px
+      &:after
+        content: '\f2f9'
+        display: block
+        line-height: 1
+
+  &__select-text
+    width: 100% !important
+    height: 100%
+
+  &__dropdown
+    border-radius: 0
+    font-size: 16px
+    font-family: "OpenSansRegular",sans-serif
+    margin-top: 0
+  li
+    height: 36px
+    padding: 0 10px
+    line-height: 36px
+
+
+
+.navigation__category__select
+  width: 100%
+  max-width: 345px
+  margin: 0 auto 30px
+  display: block !important

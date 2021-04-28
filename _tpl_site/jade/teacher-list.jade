@@ -1,0 +1,196 @@
+doctype
+
+html(lang="ru")
+  
+  -var active = 'Преподаватели' //активный пункт меню, список в header.jade
+  -var pageTitle = 'Преподаватели' + ' - B.K.S.Iyengar Ukraine' //title страницы для генерации верстки  
+  -var navigation = { 'Главная': '#', 'Новости': '#', 'Преподаватели': '#', 'Информация': '#', 'Календарь': '#', 'Центры': '#', 'Контакты': '#' };
+
+  head
+    include ./_include/_head
+
+  body
+    
+    <!-- Preloader -->
+    .loader
+      .loader__block
+    
+    nav#menu.navigation(role="navigation")
+      .lang
+        ul
+          li.active: a(href="#") Рус
+          li: a(href="#") Укр
+          
+      ul
+        each val, key in navigation
+          if active === key
+            li.active
+              a(href=val, title=key)= key
+          else
+            li
+              a(href=val, title=key)= key
+    
+    #base.base
+      include ./_include/_header
+      
+      .content
+        
+        <!-- News -->  
+        .section
+          .container
+            
+            .section__header
+              h1 Преподаватели
+              
+            .form
+              form(action="")
+                
+                .teachers__form__header
+                  .row
+                    .col-md-4.col-sm-4
+                      .form-group
+                        select.styler
+                          option(value="Сертификат 1" selected) Сертификат 1
+                          option(value="Сертификат 2") Сертификат 2
+                          option(value="Сертификат 3") Сертификат 3
+                          option(value="Сертификат 4") Сертификат 4
+                          option(value="Сертификат 5") Сертификат 5
+                    .col-md-4.col-sm-5
+                      .form-group
+                        select.styler
+                          option(value="" selected="selected") Выберите город
+                          option(value="Харьков") Харьков
+                          option(value="Киев") Киев
+                          option(value="Днепропетровск") Днепропетровск
+                          option(value="Мариуполь") Мариуполь
+                    .col-md-4.col-sm-3
+                      .form-group
+                        input(type="text" placeholder="Фамилия").form-control
+                        
+                .teachers__table
+                  
+                  table.table.table--teachers
+                    thead
+                      tr
+                        th.hidden-sm.hidden-xs № п/п
+                        th 
+                          span.hidden-xs Фамилия, имя, отчество
+                          span.visible-xs Ф.И.О., город
+                        th.hidden-xs Город
+                        th Сертификат
+                        th.hidden-sm.hidden-xs Дата выдачи
+                    tbody
+                      tr
+                        td.hidden-sm.hidden-xs.td-number 1
+                        td 
+                          strong.table--name Агудова Оксана Александровна
+                          span.visible-xs-block Харьков
+                        td.hidden-xs Харьков
+                        td 
+                          strong.color-blue Introductory 2
+                            span.visible-sm-inline-block.visible-xs-inline-block , 
+                          .visible-sm-inline-block.visible-xs-block 08.08.2014
+                        td.hidden-sm.hidden-xs 08.08.2014
+      
+                      tr
+                        td.hidden-sm.hidden-xs.td-number 2
+                        td 
+                          strong.table--name Байгускарова Наталья Халиловна
+                          span.visible-xs-block Ивано-Франковск
+                        td.hidden-xs Ивано-Франковск
+                        td
+                          strong.color-blue Intermediate Junior 1
+                            span.visible-sm-inline-block.visible-xs-inline-block , 
+                          .visible-sm-inline-block.visible-xs-block 02.06.2014
+                        td.hidden-sm.hidden-xs 02.06.2014
+                          
+                      tr
+                        td.hidden-sm.hidden-xs.td-number 1
+                        td 
+                          strong.table--name Агудова Оксана Александровна
+                          span.visible-xs-block Харьков
+                        td.hidden-xs Харьков
+                        td 
+                          strong.color-blue Introductory 2
+                            span.visible-sm-inline-block.visible-xs-inline-block , 
+                          .visible-sm-inline-block.visible-xs-block 08.08.2014
+                        td.hidden-sm.hidden-xs 08.08.2014
+      
+                      tr
+                        td.hidden-sm.hidden-xs.td-number 2
+                        td 
+                          strong.table--name Байгускарова Наталья Халиловна
+                          span.visible-xs-block Ивано-Франковск
+                        td.hidden-xs Ивано-Франковск
+                        td
+                          strong.color-blue Intermediate Junior 1
+                            span.visible-sm-inline-block.visible-xs-inline-block , 
+                          .visible-sm-inline-block.visible-xs-block 02.06.2014
+                        td.hidden-sm.hidden-xs 02.06.2014
+                          
+                      tr
+                        td.hidden-sm.hidden-xs.td-number 1
+                        td 
+                          strong.table--name Агудова Оксана Александровна
+                          span.visible-xs-block Харьков
+                        td.hidden-xs Харьков
+                        td 
+                          strong.color-blue Introductory 2
+                            span.visible-sm-inline-block.visible-xs-inline-block , 
+                          .visible-sm-inline-block.visible-xs-block 08.08.2014
+                        td.hidden-sm.hidden-xs 08.08.2014
+      
+                      tr
+                        td.hidden-sm.hidden-xs.td-number 2
+                        td 
+                          strong.table--name Байгускарова Наталья Халиловна
+                          span.visible-xs-block Ивано-Франковск
+                        td.hidden-xs Ивано-Франковск
+                        td
+                          strong.color-blue Intermediate Junior 1
+                            span.visible-sm-inline-block.visible-xs-inline-block , 
+                          .visible-sm-inline-block.visible-xs-block 02.06.2014
+                        td.hidden-sm.hidden-xs 02.06.2014
+                          
+                      tr
+                        td.hidden-sm.hidden-xs.td-number 1
+                        td 
+                          strong.table--name Агудова Оксана Александровна
+                          span.visible-xs-block Харьков
+                        td.hidden-xs Харьков
+                        td 
+                          strong.color-blue Introductory 2
+                            span.visible-sm-inline-block.visible-xs-inline-block , 
+                          .visible-sm-inline-block.visible-xs-block 08.08.2014
+                        td.hidden-sm.hidden-xs 08.08.2014
+      
+                      tr
+                        td.hidden-sm.hidden-xs.td-number 2
+                        td 
+                          strong.table--name Байгускарова Наталья Халиловна
+                          span.visible-xs-block Ивано-Франковск
+                        td.hidden-xs Ивано-Франковск
+                        td
+                          strong.color-blue Intermediate Junior 1
+                            span.visible-sm-inline-block.visible-xs-inline-block , 
+                          .visible-sm-inline-block.visible-xs-block 02.06.2014
+                        td.hidden-sm.hidden-xs 02.06.2014
+                          
+      include ./_include/_footer
+      //- div(style="height: 500px; background-color: #ccc")
+      
+      //[if gte IE 9]
+        <script src='./js/libs/html5shiv/es5-shim.min.js'>
+        <script src='./js/libs/html5shiv/html5shiv.min.js'>
+        <script src='./js/libs/html5shiv/html5shiv-printshiv.min.js'>
+        <script src='./js/libs/respond/respond.min.js'><![endif]
+
+      script(src='./js/libs/jquery/jquery-2.1.4.min.js')
+      script(src='./js/libs/jquery/jquery-migrate-1.2.1.min.js')
+      script(src='./js/libs/modernizr/modernizr.js')
+      script(src='./js/libs/plugins-scroll/plugins-scroll.js')
+      include ./_include/_footer-js
+      script(src='./js/common.js')
+
+    #back-top
+      i.zmdi.zmdi-long-arrow-up

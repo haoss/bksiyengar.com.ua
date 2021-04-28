@@ -1,0 +1,280 @@
+.calendar
+  &__form
+    &__header
+      border-bottom: 2px solid $color-blue
+      margin-bottom: 20px
+      padding-bottom: 5px
+
+  &__table
+    margin-right: -7px
+
+  &__row
+    @include clearfix
+
+  &__block
+    float: left
+    border: 1px solid #d5d5d5
+    height: 162px
+    position: relative
+    width: calc(100%/7)
+    font-size: 12px
+    color: $color-blue
+    font-family: 'OpenSansRegular'
+    padding: 20px
+    margin: -1px 0 0 -1px
+    transition: all 0.3s
+    &.last
+      border-right-color: #d5d5d5
+    &.disabled
+      border-color: transparent
+      .calendar__number, .calendar__img, .calendar__text, .calendar__button
+        opacity: 0
+    &.enabled
+      cursor: pointer
+      background-color: $color-blue
+      border-color: #00558c
+      color: #fff
+      .calendar__number, .calendar__img, .calendar__text, .calendar__button
+        opacity: 1
+      .calendar__number
+        color: #fff
+      .calendar__button
+        border-color: #fff
+    &+.calendar__block.disabled:first-child
+      border-left-color: #d5d5d5
+
+    &.active
+      border-color: $color-blue
+      border-bottom-color: #fff
+      z-index: 20
+      background-color: #fff
+      color: $color-blue
+
+      .calendar__button
+        opacity: 1
+        border-color: $color-blue
+        .zmdi-chevron-up
+          display: inline-block
+        .zmdi-chevron-down
+          display: none
+
+      .calendar__number
+        color: $color-blue
+      .calendar__text, .calendar__img
+        opacity: 0
+
+  &__number
+    position: absolute
+    font-size: 20px
+    color: $color-blue
+    font-family: 'OpenSansSemiBold'
+    top: 20px
+    left: 20px
+    line-height: 0.7
+
+  &__img
+    position: absolute
+    top: 6px
+    right: 6px
+    img
+      vertical-align: middle
+    img + img
+      margin-left: 10px
+
+  &__text
+    position: absolute
+    bottom: 30px
+    p
+      line-height: 17px
+      margin-bottom: 15px
+      max-height: 34px
+      overflow: hidden
+    &__name
+      max-height: 16px
+      overflow: hidden
+
+  &__button
+    position: absolute
+    bottom: 10px
+    right: 10px
+    font-size: 18px
+    height: 23px
+    width: 23px
+    border: 1px solid $color-blue
+    text-align: center
+    line-height: 22px
+    border-radius: 50%
+    i
+      line-height: 1
+      display: inline-block
+    .zmdi-chevron-up
+      display: none
+
+  &__img, &__text, &__button
+    opacity: 0
+
+  &__event
+    padding-right: 8px
+    transition: all 0.3s
+    display: none
+    &__body
+      background-color: #fff
+      border: 1px solid $color-blue
+      min-height: 100px
+      margin-left: -1px
+      position: relative
+      z-index: 10
+      margin-top: -1px
+      padding: 42px 30px 27px 30px
+      display: none
+
+    &__date
+      // max-width: inherit
+      // float: none
+      small
+        text-align: right
+        color: #a8a8a8
+        font-size: 14px
+      .separator
+        margin-bottom: 17px
+        margin-top: 17px
+
+    &__text
+      padding-left: 20px
+      &::before
+        position: absolute
+        width: 3px
+        height: 80px
+        content: ''
+        background-color: $color-blue
+        margin-left: -23px
+        margin-top: 5px
+      .h1, .h2, h2, .h3, h3, .h4, h4, .h5, h5, .h6, h6
+        color: $primary-color
+      p
+        margin-bottom: 15px
+
+    &__row
+      &+.calendar__event__row
+        margin-top: 40px
+
+/**/
+.calendar
+  &__year
+    padding-top: 30px
+
+    &__block
+      height: 272px
+      width: 262px
+      margin: 0 auto 50px
+
+    .owl-prev, .owl-next
+      color: $color-blue
+      top: 105px
+
+.cal
+  display: block
+  width: 262px
+  a
+    text-decoration: none
+  caption
+    display: block
+    line-height: 32px
+    color: $color-blue
+    text-align: center
+    background: none
+    border-bottom: 1px solid $color-blue
+    font-family: 'OpenSansSemiBold'
+    font-size: 16px
+    a
+      display: block
+      padding: 0 10px
+      font-size: 15px
+      color: #3a3d42
+      display: block
+
+      &:hover
+        color: white
+    .prev
+      float: left
+      display: none
+    .next
+      float: right
+      display: none
+  th, td
+    width: 38px
+    text-align: center
+  th:first-child, td:first-child
+    border-left: 0
+  th
+    line-height: 5px
+    font-size: 8px
+    color: #696969
+    text-transform: uppercase
+    font-weight: normal
+    opacity: 0
+  td
+    font-size: 15px
+    a
+      clear: both
+      position: relative
+      line-height: 37px
+      height: 38px
+      color: #3a3d42
+      display: block
+      border: 1px solid transparent
+      &:hover
+        border-color: $color-blue
+    &.off a
+      background: #f3f3f3
+      color: #b3b3b3
+      overflow: hidden
+      font-size: 0
+      width: 0
+      height: 0
+    &.active a, a:active
+      margin: 0
+      color: $color-white
+      background: $color-blue
+      border-color: $color-white
+    &.active:first-child a, &:first-child a:active
+      border-left: 0
+      margin-left: 0
+    &.active:last-child a, &:last-child a:active
+      border-right: 0
+      margin-right: 0
+  tr:last-child td
+    &.active a, a:active
+      border-bottom: 0
+      margin-bottom: 0
+
+/***/
+.tooltipster-base
+  width: 174px !important
+  border: 1px solid $color-blue !important
+  background: #fff !important
+  padding: 0 !important
+  a
+    text-decoration: none
+    color: #3a3d42
+    &:hover
+      text-decoration: underline
+  td
+    vertical-align: top
+
+  tr
+    &+tr
+      td
+        padding-top: 10px
+  .td-icon
+    padding-right: 10px
+
+.tooltipster-arrow-border
+  margin-bottom: -2px !important
+  border-color: $color-blue !important
+  &+span
+    bottom: -8px !important
+.tooltipster-content
+  color: #3a3d42 !important
+  font-size: 11px !important
+  padding: 6px !important

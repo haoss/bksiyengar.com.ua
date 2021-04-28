@@ -1,0 +1,32 @@
+<!-- Header -->
+header.header.header--main(style="background-image: url('./tmp/header/header.jpg')")
+  .container
+    
+    .lang.hidden-xs.hidden-sm
+      ul
+        li.active: a(href="#") Рус
+        li: a(href="#") Укр
+    
+    a(href="#").logo
+      img(src="./img/logo.svg", alt="")
+    
+    a(href="#menu").sandwich.visible-sm-block.visible-xs-block
+      .sw-topper
+      .sw-bottom
+      .sw-footer
+        
+    nav.top__navigation(role="navigation")
+      ul
+        each val, key in navigation
+          if active === key
+            li.active
+              a(href=val, title=key)= key
+          else
+            li
+              a(href=val, title=key)= key
+
+    .header__container
+      blockquote
+        .blockquote__title.hidden-xs жизнь и любовь великого человека, слившись воедино, породили истину
+        p «Йога — это вневременная прагматическая наука, которая разрабатывалась на протяжении тысячелетий и традиционно занималась физическим, нравственным, ментальным и духовным благополучием человека.»
+        em.hidden-xs Беллур Кришнамачар Сундарараджа Айенгар

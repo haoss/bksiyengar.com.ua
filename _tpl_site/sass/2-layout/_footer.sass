@@ -1,0 +1,129 @@
+.footer
+  border-top: 1px solid #e6e6e6
+
+  &__bottom
+    background-color: $color-blue
+    color: $color-white
+
+  &__top
+    color: $color-blue
+    padding-top: 30px
+    nav
+      font-size: rem(14)
+      ul, li
+        margin: 0
+        padding: 0
+        list-style: none
+      &>ul
+        display: table
+        width: 100%
+        &>li
+          display: table-cell
+          vertical-align: top
+          padding-right: 10px
+          &:last-child
+            padding-right: 0
+          &>a
+            i
+              margin-right: 15px
+              display: none
+            &.active
+              text-decoration: none
+              .zmdi-chevron-down
+                display: none
+              .zmdi-chevron-up
+                display: inline-block
+      li
+        a
+          text-decoration: none
+          display: inline-block
+          padding: 5px 0
+          &:hover
+            text-decoration: underline
+
+  &__contacts
+    &__block
+      margin-bottom: 15px
+      padding-left: 50px
+      padding-top: 7px
+      i
+        border: 1px solid $color-blue
+        height: 34px
+        width: 34px
+        vertical-align: middle
+        margin-right: 10px
+        border-radius: 50%
+        display: inline-flex
+        justify-content: center
+        align-items: center
+        font-size: rem(18)
+        position: absolute
+        margin-left: -50px
+        margin-top: -7px
+
+  &__social
+    height: 60px
+    padding-top: 8px
+    @include clearfix
+    float: right
+
+.social
+  a
+    display: flex
+    justify-content: center
+    align-items: center
+    height: 43px
+    width: 43px
+    text-align: center
+    font-size: rem(22)
+    color: $color-white
+    border: 1px solid $color-white
+    border-radius: 50%
+    float: left
+    margin-left: 25px
+    text-decoration: none
+    &:first-child
+      margin-left: 0
+    &:hover
+      background-color: $color-white
+      color: $color-blue
+
+  &--blue
+    margin-bottom: 20px
+    a
+      border-color: $color-blue
+      color: $color-blue
+      background-color: $color-white
+      margin-left: 20px
+      font-size: rem(18)
+      &:hover
+        background-color: $color-blue
+        color: $color-white
+
+.copyright
+  height: 60px
+  line-height: 60px
+  font-size: rem(12)
+
+#back-top
+  position: fixed
+  right: 15px
+  bottom: 15px
+  transition: 1s
+  color: #e6e6e6
+  border: 1px solid #e6e6e6
+  border-radius: 50%
+  height: 58px
+  width: 58px
+  text-align: center
+  line-height: 58px
+  z-index: 1000
+  cursor: pointer
+  font-size: 24px
+  i
+    display: inline-block
+    line-height: 0.5
+  &:hover
+    color: #fff
+    border-color: darken(#e6e6e6, 60%)
+    background-color: darken(#e6e6e6, 60%)

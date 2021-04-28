@@ -1,0 +1,105 @@
+doctype
+
+html(lang="ru")
+  
+  -var active = 'Информация' //активный пункт меню, список в header.jade
+  -var pageTitle = 'Врикшасана' + ' - B.K.S.Iyengar Ukraine' //title страницы для генерации верстки  
+  -var navigation = { 'Главная': '#', 'Новости': '#', 'Преподаватели': '#', 'Информация': '#', 'Календарь': '#', 'Центры': '#', 'Контакты': '#' };
+
+  head
+    include ./_include/_head
+
+  body
+    
+    <!-- Preloader -->
+    .loader
+      .loader__block
+    
+    nav#menu.navigation(role="navigation")
+      .lang
+        ul
+          li.active: a(href="#") Рус
+          li: a(href="#") Укр
+          
+      ul
+        each val, key in navigation
+          if active === key
+            li.active
+              a(href=val, title=key)= key
+          else
+            li
+              a(href=val, title=key)= key
+    
+    #base.base
+      include ./_include/_header
+      
+      .content
+        
+        <!-- News -->  
+        .section
+          .container
+            
+            .section__header
+              h1 Врикшасана
+              
+            img(src="./tmp/information/info-document.jpg", alt="").img.img--document
+            
+            p
+              em В переводе с санскрита врикша означает «дерево».
+            
+            p Эта асана приводит в тонус мышцы ног, дает ощущение устойчивости и равновесия.
+            p Травмы ног, боли в суставах, повышенное давление.
+            
+            .clear
+              
+            h1
+              strong h1 Техника 
+            h2 
+              strong h2 Техника 
+            h3 
+              strong h3 Техника 
+            h4 
+              strong h4 Техника 
+            h5 
+              strong h5 Техника 
+            h6 
+              strong h6 Техника 
+              
+            ul.list
+              li Встаньте в Тадасану. 
+              li Согните правую ногу в колене и поместите правую пятку в основание левого бедра. 
+              li Прижмите всю правую стопу к левому бедру, направив пальцы вниз. 
+              li Балансируя на левой ноге, соедините ладони и вытяните руки над головой. Задержитесь в позе несколько секунд. Дышите глубоко. Опустите руки вниз и разъедините ладони. Выпрямите правую ногу в колене и вернитесь в Тадасану. 
+              li Выполните позу в другую сторону. Стоя на правой ноге, оторвите левую стопу от пола и поместите левую пятку в основание правого бедра. Оставайтесь в асане несколько секунд. Затем вернитесь в Тадасану и расслабьтесь.
+              
+            ol.list
+              li Встаньте в Тадасану. 
+              li Согните правую ногу в колене и поместите правую пятку в основание левого бедра. 
+              li Прижмите всю правую стопу к левому бедру, направив пальцы вниз. 
+              li Балансируя на левой ноге, соедините ладони и вытяните руки над головой. Задержитесь в позе несколько секунд. Дышите глубоко. Опустите руки вниз и разъедините ладони. Выпрямите правую ногу в колене и вернитесь в Тадасану. 
+              li Выполните позу в другую сторону. Стоя на правой ноге, оторвите левую стопу от пола и поместите левую пятку в основание правого бедра. Оставайтесь в асане несколько секунд. Затем вернитесь в Тадасану и расслабьтесь.
+              
+            .clear30
+              
+            a(href="#").link.link--back
+              i.zmdi.zmdi-arrow-left
+              | Вернуться к списку асан
+      
+      include ./_include/_footer
+      //- div(style="height: 500px; background-color: #ccc")
+      
+      //[if gte IE 9]
+        <script src='./js/libs/html5shiv/es5-shim.min.js'>
+        <script src='./js/libs/html5shiv/html5shiv.min.js'>
+        <script src='./js/libs/html5shiv/html5shiv-printshiv.min.js'>
+        <script src='./js/libs/respond/respond.min.js'><![endif]
+
+      script(src='./js/libs/jquery/jquery-2.1.4.min.js')
+      script(src='./js/libs/jquery/jquery-migrate-1.2.1.min.js')
+      script(src='./js/libs/modernizr/modernizr.js')
+      script(src='./js/libs/plugins-scroll/plugins-scroll.js')
+      include ./_include/_footer-js
+      script(src='./js/common.js')
+
+    #back-top
+      i.zmdi.zmdi-long-arrow-up

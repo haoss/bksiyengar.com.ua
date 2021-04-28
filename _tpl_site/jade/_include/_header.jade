@@ -1,0 +1,28 @@
+<!-- Header -->
+header.header(style="background-image: url('./tmp/header/news.jpg')")
+  .container
+    
+    .lang.hidden-xs.hidden-sm
+      ul
+        li.active: a(href="#") Рус
+        li: a(href="#") Укр
+    
+    a(href="#").logo
+      img(src="./img/logo.svg", alt="")
+    
+    a(href="#menu").sandwich.visible-sm-block.visible-xs-block
+      .sw-topper
+      .sw-bottom
+      .sw-footer
+        
+    nav.top__navigation(role="navigation")
+      ul
+        each val, key in navigation
+          if active === key
+            li.active
+              a(href=val, title=key)= key
+          else
+            li
+              a(href=val, title=key)= key
+
+    .header__container

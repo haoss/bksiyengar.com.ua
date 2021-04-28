@@ -1,0 +1,22 @@
+.owl-prev, .owl-next
+  position: absolute
+  font-family: 'Material-Design-Iconic-Font'
+  font-size: 45px
+  color: $color-white
+  top: 58px
+  transition: color 0.3s linear
+  &:hover
+    color: lighten($color-blue, 15%)
+  &:before
+    display: block
+    line-height: 0.5
+
+.owl-prev
+  left: 0
+  &:before
+    content: '\f2fa'
+
+.owl-next
+  right: 0
+  &:before
+    content: '\f2fb'

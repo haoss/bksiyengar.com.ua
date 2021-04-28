@@ -1,0 +1,715 @@
+doctype
+
+html(lang="ru")
+  
+  -var active = 'Календарь' //активный пункт меню, список в header.jade
+  -var pageTitle = 'Календарь мероприятий' + ' - B.K.S.Iyengar Ukraine' //title страницы для генерации верстки  
+  -var navigation = { 'Главная': '#', 'Новости': '#', 'Преподаватели': '#', 'Информация': '#', 'Календарь': '#', 'Центры': '#', 'Контакты': '#' };
+
+  head
+    include ./_include/_head
+
+  body
+    
+    <!-- Preloader -->
+    .loader
+      .loader__block
+    
+    nav#menu.navigation(role="navigation")
+      .lang
+        ul
+          li.active: a(href="#") Рус
+          li: a(href="#") Укр
+          
+      ul
+        each val, key in navigation
+          if active === key
+            li.active
+              a(href=val, title=key)= key
+          else
+            li
+              a(href=val, title=key)= key
+    
+    #base.base
+      include ./_include/_header
+      
+      .content
+        
+        <!-- News -->  
+        .section
+          .container
+            
+            .section__header
+              h1 Календарь мероприятий
+            
+            .form
+                
+              .calendar__form__header
+                form(action="")
+                  .row
+                    .col-lg-3.col-sm-4
+                      .form-group
+                        select.styler
+                          option(value="Январь" selected) Январь
+                          option(value="Февраль") Февраль
+                          option(value="Март") Март
+                          option(value="Апрель") Апрель
+                          option(value="Май") Май
+                          option(value="Июнь") Июнь
+                          option(value="Июль") Июль
+                          option(value="Август") Август
+                          option(value="Сентябрь") Сентябрь
+                          option(value="Октябрь") Октябрь
+                          option(value="Ноябрь") Ноябрь
+                          option(value="Декабрь") Декабрь
+                          
+                    .col-lg-2.col-sm-3
+                      .form-group
+                        select.styler
+                          option(value="1990") 1990
+                          option(value="1991") 1991
+                          option(value="1992") 1992
+                          option(value="1993") 1993
+                          option(value="1994") 1994
+                          option(value="1995") 1995
+                          option(value="1996") 1996
+                          option(value="1997") 1997
+                          option(value="1998") 1998
+                          option(value="1999") 1999
+                          option(value="2000") 2000
+                          option(value="2001") 2001
+                          option(value="2002") 2002
+                          option(value="2003") 2003
+                          option(value="2004") 2004
+                          option(value="2005") 2005
+                          option(value="2006") 2006
+                          option(value="2007") 2007
+                          option(value="2008") 2008
+                          option(value="2009") 2009
+                          option(value="2010") 2010
+                          
+                    .col-lg-3.col-sm-5
+                      .form-group
+                        select.styler
+                          option(value="Выберите город" selected) Выберите город
+                          option(value="Киев") Киев
+                          option(value="Харьков") Харьков
+                          option(value="Ереван") Ереван
+                          option(value="Днепропетровск") Днепропетровск
+                          
+              .calendar__table
+                .calendar__row.one
+                  .calendar__block.disabled
+                    .calendar__number 0
+                    .calendar__img
+                      img(src="./tmp/logos/logos-1.png", alt="")
+                    .calendar__text
+                      p Учительский курс 
+                        br
+                        | (1 семинар 1 год)
+                      .calendar__text__name 
+                        strong В. Литвинов
+                    .calendar__button
+                      i.zmdi.zmdi-chevron-down
+                      i.zmdi.zmdi-chevron-up
+                  .calendar__block
+                    .calendar__number 1
+                    .calendar__img
+                      img(src="./tmp/logos/logos-2.png", alt="")
+                    .calendar__text
+                      p Учительский курс 
+                        br
+                        | (1 семинар 1 год)
+                      .calendar__text__name 
+                        strong В. Литвинов
+                    .calendar__button
+                      i.zmdi.zmdi-chevron-down
+                      i.zmdi.zmdi-chevron-up
+                  .calendar__block
+                    .calendar__number 2
+                    .calendar__img
+                      img(src="./tmp/logos/logos-1.png", alt="")
+                    .calendar__text
+                      p Учительский курс 
+                        br
+                        | (1 семинар 1 год)
+                      .calendar__text__name 
+                        strong В. Литвинов
+                    .calendar__button
+                      i.zmdi.zmdi-chevron-down
+                      i.zmdi.zmdi-chevron-up
+                  .calendar__block
+                    .calendar__number 3
+                    .calendar__img
+                      img(src="./tmp/logos/logos-2.png", alt="")
+                    .calendar__text
+                      p Учительский курс 
+                        br
+                        | (1 семинар 1 год)
+                      .calendar__text__name 
+                        strong В. Литвинов
+                    .calendar__button
+                      i.zmdi.zmdi-chevron-down
+                      i.zmdi.zmdi-chevron-up
+                  .calendar__block
+                    .calendar__number 4
+                    .calendar__img
+                      img(src="./tmp/logos/logos-1.png", alt="")
+                    .calendar__text
+                      p Учительский курс 
+                        br
+                        | (1 семинар 1 год)
+                      .calendar__text__name 
+                        strong В. Литвинов
+                    .calendar__button
+                      i.zmdi.zmdi-chevron-down
+                      i.zmdi.zmdi-chevron-up
+                  .calendar__block
+                    .calendar__number 5
+                    .calendar__img
+                      img(src="./tmp/logos/logos-2.png", alt="")
+                    .calendar__text
+                      p Учительский курс 
+                        br
+                        | (1 семинар 1 год)
+                      .calendar__text__name 
+                        strong В. Литвинов
+                    .calendar__button
+                      i.zmdi.zmdi-chevron-down
+                      i.zmdi.zmdi-chevron-up
+                  .calendar__block.last
+                    .calendar__number 6
+                    .calendar__img
+                      img(src="./tmp/logos/logos-1.png", alt="")
+                    .calendar__text
+                      p Учительский курс 
+                        br
+                        | (1 семинар 1 год)
+                      .calendar__text__name 
+                        strong В. Литвинов
+                    .calendar__button
+                      i.zmdi.zmdi-chevron-down
+                      i.zmdi.zmdi-chevron-up
+                
+                .calendar__event
+                  .calendar__event__body
+                
+                .calendar__row.two
+                  .calendar__block
+                    .calendar__number 7
+                    .calendar__img
+                      img(src="./tmp/logos/logos-1.png", alt="")
+                    .calendar__text
+                      p Учительский курс 
+                        br
+                        | (1 семинар 1 год)
+                      .calendar__text__name 
+                        strong В. Литвинов
+                    .calendar__button
+                      i.zmdi.zmdi-chevron-down
+                      i.zmdi.zmdi-chevron-up
+                  .calendar__block
+                    .calendar__number 8
+                    .calendar__img
+                      img(src="./tmp/logos/logos-2.png", alt="")
+                    .calendar__text
+                      p Учительский курс 
+                        br
+                        | (1 семинар 1 год)
+                      .calendar__text__name 
+                        strong В. Литвинов
+                    .calendar__button
+                      i.zmdi.zmdi-chevron-down
+                      i.zmdi.zmdi-chevron-up
+                  .calendar__block
+                    .calendar__number 9
+                    .calendar__img
+                      img(src="./tmp/logos/logos-1.png", alt="")
+                    .calendar__text
+                      p Учительский курс 
+                        br
+                        | (1 семинар 1 год)
+                      .calendar__text__name 
+                        strong В. Литвинов
+                    .calendar__button
+                      i.zmdi.zmdi-chevron-down
+                      i.zmdi.zmdi-chevron-up
+                  .calendar__block
+                    .calendar__number 10
+                    .calendar__img
+                      img(src="./tmp/logos/logos-2.png", alt="")
+                    .calendar__text
+                      p Учительский курс 
+                        br
+                        | (1 семинар 1 год)
+                      .calendar__text__name 
+                        strong В. Литвинов
+                    .calendar__button
+                      i.zmdi.zmdi-chevron-down
+                      i.zmdi.zmdi-chevron-up
+                  .calendar__block.enabled.active
+                    .calendar__number 11
+                    .calendar__img
+                      img(src="./tmp/logos/logos-1.png", alt="")
+                    .calendar__text
+                      p Учительский курс 
+                        br
+                        | (1 семинар 1 год)
+                      .calendar__text__name 
+                        strong В. Литвинов
+                    .calendar__button
+                      i.zmdi.zmdi-chevron-down
+                      i.zmdi.zmdi-chevron-up
+                  .calendar__block.enabled
+                    .calendar__number 12
+                    .calendar__img
+                      img(src="./tmp/logos/logos-2.png", alt="")
+                    .calendar__text
+                      p Учительский курс 
+                        br
+                        | (1 семинар 1 год)
+                      .calendar__text__name 
+                        strong В. Литвинов
+                    .calendar__button
+                      i.zmdi.zmdi-chevron-down
+                      i.zmdi.zmdi-chevron-up
+                  .calendar__block.last.enabled
+                    .calendar__number 13
+                    .calendar__img
+                      img(src="./tmp/logos/logos-1.png", alt="")
+                      img(src="./tmp/logos/logos-2.png", alt="")
+                    .calendar__text
+                      p Учительский курс 
+                        br
+                        | (1 семинар 1 год)
+                      .calendar__text__name 
+                        strong В. Литвинов
+                    .calendar__button
+                      i.zmdi.zmdi-chevron-down
+                      i.zmdi.zmdi-chevron-up
+                
+                .calendar__event(style="display: block;")
+                  .calendar__event__body(style="display: block")
+                    
+                    .calendar__event__row
+                      .row
+                        .col-md-2.col-sm-3.col-xs-4
+                          .news__date.calendar__event__date
+                            strong 11-13
+                            span февраля 2016 
+                            hr.separator
+                            small Стаж практики
+                              br
+                              | &nbsp;от 2 лет
+                            
+                        .col-md-10.col-sm-9.col-xs-8
+                          .calendar__event__text
+                            .h1 Учительский курс (1 семинар 1 год)
+                            p.calendar__event__introtext
+                              em Харьков, спортивный комплекс Унифехт
+                              
+                            .hidden-xs
+                              h3 
+                                strong Преподаватель: Виталий Литвинов
+                              p Контакты организатора: Лилия Полякова, +38 (073) 063 05 09, yoga@bksiyengar.com.ua
+                              p Стоимость: 2 500 UAH / семинар, 6 600 UAH / год
+                              
+                      .row.visible-xs
+                        .col-xs-12
+                          .calendar__event__text.mobile
+                            h3 
+                              strong Преподаватель: Виталий Литвинов
+                            p Контакты организатора: Лилия Полякова, +38 (073) 063 05 09, yoga@bksiyengar.com.ua
+                            p Стоимость: 2 500 UAH / семинар, 6 600 UAH / год
+                
+                    .calendar__event__row
+                      .row
+                        .col-md-2.col-sm-3.col-xs-4
+                          .news__date.calendar__event__date
+                            strong 11-13
+                            span марта 2016 
+                            hr.separator
+                            small Стаж практики
+                              br
+                              | &nbsp;от 2 лет
+                            
+                        .col-md-10.col-sm-9.col-xs-8
+                          .calendar__event__text
+                            .h1 Учительский курс (1 семинар 1 год)
+                            p.calendar__event__introtext
+                              em Харьков, спортивный комплекс Унифехт
+                              
+                            .hidden-xs
+                              h3 
+                                strong Преподаватель: Виталий Литвинов
+                              p Контакты организатора: Лилия Полякова, +38 (073) 063 05 09, yoga@bksiyengar.com.ua
+                              p Стоимость: 2 500 UAH / семинар, 6 600 UAH / год
+                              
+                      .row.visible-xs
+                        .col-xs-12
+                          .calendar__event__text.mobile
+                            h3 
+                              strong Преподаватель: Виталий Литвинов
+                            p Контакты организатора: Лилия Полякова, +38 (073) 063 05 09, yoga@bksiyengar.com.ua
+                            p Стоимость: 2 500 UAH / семинар, 6 600 UAH / год
+                
+                  .calendar__event__body(style="display: block")
+                    
+                    .calendar__event__row
+                      .row
+                        .col-md-2.col-sm-3.col-xs-4
+                          .news__date.calendar__event__date
+                            strong 11-13
+                            span февраля 2016 
+                            hr.separator
+                            small Стаж практики
+                              br
+                              | &nbsp;от 2 лет
+                            
+                        .col-md-10.col-sm-9.col-xs-8
+                          .calendar__event__text
+                            .h1 Учительский курс (1 семинар 1 год)
+                            p.calendar__event__introtext
+                              em Харьков, спортивный комплекс Унифехт
+                              
+                            .hidden-xs
+                              h3 
+                                strong Преподаватель: Виталий Литвинов
+                              p Контакты организатора: Лилия Полякова, +38 (073) 063 05 09, yoga@bksiyengar.com.ua
+                              p Стоимость: 2 500 UAH / семинар, 6 600 UAH / год
+                              
+                      .row.visible-xs
+                        .col-xs-12
+                          .calendar__event__text.mobile
+                            h3 
+                              strong Преподаватель: Виталий Литвинов
+                            p Контакты организатора: Лилия Полякова, +38 (073) 063 05 09, yoga@bksiyengar.com.ua
+                            p Стоимость: 2 500 UAH / семинар, 6 600 UAH / год
+                
+                    .calendar__event__row
+                      .row
+                        .col-md-2.col-sm-3.col-xs-4
+                          .news__date.calendar__event__date
+                            strong 11-13
+                            span марта 2016 
+                            hr.separator
+                            small Стаж практики
+                              br
+                              | &nbsp;от 2 лет
+                            
+                        .col-md-10.col-sm-9.col-xs-8
+                          .calendar__event__text
+                            .h1 Учительский курс (1 семинар 1 год)
+                            p.calendar__event__introtext
+                              em Харьков, спортивный комплекс Унифехт
+                              
+                            .hidden-xs
+                              h3 
+                                strong Преподаватель: Виталий Литвинов
+                              p Контакты организатора: Лилия Полякова, +38 (073) 063 05 09, yoga@bksiyengar.com.ua
+                              p Стоимость: 2 500 UAH / семинар, 6 600 UAH / год
+                              
+                      .row.visible-xs
+                        .col-xs-12
+                          .calendar__event__text.mobile
+                            h3 
+                              strong Преподаватель: Виталий Литвинов
+                            p Контакты организатора: Лилия Полякова, +38 (073) 063 05 09, yoga@bksiyengar.com.ua
+                            p Стоимость: 2 500 UAH / семинар, 6 600 UAH / год
+                
+                .calendar__row.three
+                  .calendar__block
+                    .calendar__number 14
+                    .calendar__img
+                      img(src="./tmp/logos/logos-1.png", alt="")
+                    .calendar__text
+                      p Учительский курс 
+                        br
+                        | (1 семинар 1 год)
+                      .calendar__text__name 
+                        strong В. Литвинов
+                    .calendar__button
+                      i.zmdi.zmdi-chevron-down
+                      i.zmdi.zmdi-chevron-up
+                  .calendar__block
+                    .calendar__number 15
+                    .calendar__img
+                      img(src="./tmp/logos/logos-2.png", alt="")
+                    .calendar__text
+                      p Учительский курс 
+                        br
+                        | (1 семинар 1 год)
+                      .calendar__text__name 
+                        strong В. Литвинов
+                    .calendar__button
+                      i.zmdi.zmdi-chevron-down
+                      i.zmdi.zmdi-chevron-up
+                  .calendar__block
+                    .calendar__number 16
+                    .calendar__img
+                      img(src="./tmp/logos/logos-1.png", alt="")
+                    .calendar__text
+                      p Учительский курс 
+                        br
+                        | (1 семинар 1 год)
+                      .calendar__text__name 
+                        strong В. Литвинов
+                    .calendar__button
+                      i.zmdi.zmdi-chevron-down
+                      i.zmdi.zmdi-chevron-up
+                  .calendar__block
+                    .calendar__number 17
+                    .calendar__img
+                      img(src="./tmp/logos/logos-2.png", alt="")
+                    .calendar__text
+                      p Учительский курс 
+                        br
+                        | (1 семинар 1 год)
+                      .calendar__text__name 
+                        strong В. Литвинов
+                    .calendar__button
+                      i.zmdi.zmdi-chevron-down
+                      i.zmdi.zmdi-chevron-up
+                  .calendar__block
+                    .calendar__number 18
+                    .calendar__img
+                      img(src="./tmp/logos/logos-1.png", alt="")
+                    .calendar__text
+                      p Учительский курс 
+                        br
+                        | (1 семинар 1 год)
+                      .calendar__text__name 
+                        strong В. Литвинов
+                    .calendar__button
+                      i.zmdi.zmdi-chevron-down
+                      i.zmdi.zmdi-chevron-up
+                  .calendar__block
+                    .calendar__number 19
+                    .calendar__img
+                      img(src="./tmp/logos/logos-2.png", alt="")
+                    .calendar__text
+                      p Учительский курс 
+                        br
+                        | (1 семинар 1 год)
+                      .calendar__text__name 
+                        strong В. Литвинов
+                    .calendar__button
+                      i.zmdi.zmdi-chevron-down
+                      i.zmdi.zmdi-chevron-up
+                  .calendar__block.last
+                    .calendar__number 20
+                    .calendar__img
+                      img(src="./tmp/logos/logos-1.png", alt="")
+                    .calendar__text
+                      p Учительский курс 
+                        br
+                        | (1 семинар 1 год)
+                      .calendar__text__name 
+                        strong В. Литвинов
+                    .calendar__button
+                      i.zmdi.zmdi-chevron-down
+                      i.zmdi.zmdi-chevron-up
+                
+                .calendar__event
+                  .calendar__event__body
+                
+                .calendar__row.four
+                  .calendar__block
+                    .calendar__number 21
+                    .calendar__img
+                      img(src="./tmp/logos/logos-1.png", alt="")
+                    .calendar__text
+                      p Учительский курс 
+                        br
+                        | (1 семинар 1 год)
+                      .calendar__text__name 
+                        strong В. Литвинов
+                    .calendar__button
+                      i.zmdi.zmdi-chevron-down
+                      i.zmdi.zmdi-chevron-up
+                  .calendar__block
+                    .calendar__number 22
+                    .calendar__img
+                      img(src="./tmp/logos/logos-2.png", alt="")
+                    .calendar__text
+                      p Учительский курс 
+                        br
+                        | (1 семинар 1 год)
+                      .calendar__text__name 
+                        strong В. Литвинов
+                    .calendar__button
+                      i.zmdi.zmdi-chevron-down
+                      i.zmdi.zmdi-chevron-up
+                  .calendar__block
+                    .calendar__number 23
+                    .calendar__img
+                      img(src="./tmp/logos/logos-1.png", alt="")
+                    .calendar__text
+                      p Учительский курс 
+                        br
+                        | (1 семинар 1 год)
+                      .calendar__text__name 
+                        strong В. Литвинов
+                    .calendar__button
+                      i.zmdi.zmdi-chevron-down
+                      i.zmdi.zmdi-chevron-up
+                  .calendar__block
+                    .calendar__number 24
+                    .calendar__img
+                      img(src="./tmp/logos/logos-2.png", alt="")
+                    .calendar__text
+                      p Учительский курс 
+                        br
+                        | (1 семинар 1 год)
+                      .calendar__text__name 
+                        strong В. Литвинов
+                    .calendar__button
+                      i.zmdi.zmdi-chevron-down
+                      i.zmdi.zmdi-chevron-up
+                  .calendar__block
+                    .calendar__number 25
+                    .calendar__img
+                      img(src="./tmp/logos/logos-1.png", alt="")
+                    .calendar__text
+                      p Учительский курс 
+                        br
+                        | (1 семинар 1 год)
+                      .calendar__text__name 
+                        strong В. Литвинов
+                    .calendar__button
+                      i.zmdi.zmdi-chevron-down
+                      i.zmdi.zmdi-chevron-up
+                  .calendar__block.enabled
+                    .calendar__number 26
+                    .calendar__img
+                      img(src="./tmp/logos/logos-2.png", alt="")
+                    .calendar__text
+                      p Семинар на тему «Здоровый позвоночник»
+                      .calendar__text__name 
+                        strong Е. Быстрова
+                    .calendar__button
+                      i.zmdi.zmdi-chevron-down
+                      i.zmdi.zmdi-chevron-up
+                  .calendar__block.last.enabled
+                    .calendar__number 27
+                    .calendar__img
+                      img(src="./tmp/logos/logos-1.png", alt="")
+                    .calendar__text
+                      p Семинар на тему «Здоровый позвоночник»
+                      .calendar__text__name 
+                        strong Е. Быстрова
+                    .calendar__button
+                      i.zmdi.zmdi-chevron-down
+                      i.zmdi.zmdi-chevron-up
+                
+                .calendar__event
+                  .calendar__event__body
+                
+                .calendar__row.five
+                  .calendar__block
+                    .calendar__number 28
+                    .calendar__img
+                      img(src="./tmp/logos/logos-1.png", alt="")
+                    .calendar__text
+                      p Учительский курс 
+                        br
+                        | (1 семинар 1 год)
+                      .calendar__text__name 
+                        strong В. Литвинов
+                    .calendar__button
+                      i.zmdi.zmdi-chevron-down
+                      i.zmdi.zmdi-chevron-up
+                  .calendar__block
+                    .calendar__number 29
+                    .calendar__img
+                      img(src="./tmp/logos/logos-2.png", alt="")
+                    .calendar__text
+                      p Учительский курс 
+                        br
+                        | (1 семинар 1 год)
+                      .calendar__text__name 
+                        strong В. Литвинов
+                    .calendar__button
+                      i.zmdi.zmdi-chevron-down
+                      i.zmdi.zmdi-chevron-up
+                  .calendar__block
+                    .calendar__number 30
+                    .calendar__img
+                      img(src="./tmp/logos/logos-1.png", alt="")
+                    .calendar__text
+                      p Учительский курс 
+                        br
+                        | (1 семинар 1 год)
+                      .calendar__text__name 
+                        strong В. Литвинов
+                    .calendar__button
+                      i.zmdi.zmdi-chevron-down
+                      i.zmdi.zmdi-chevron-up
+                  .calendar__block
+                    .calendar__number 31
+                    .calendar__img
+                      img(src="./tmp/logos/logos-2.png", alt="")
+                    .calendar__text
+                      p Учительский курс 
+                        br
+                        | (1 семинар 1 год)
+                      .calendar__text__name 
+                        strong В. Литвинов
+                    .calendar__button
+                      i.zmdi.zmdi-chevron-down
+                      i.zmdi.zmdi-chevron-up
+                  .calendar__block.disabled
+                    .calendar__number 1
+                    .calendar__img
+                      img(src="./tmp/logos/logos-1.png", alt="")
+                    .calendar__text
+                      p Учительский курс 
+                        br
+                        | (1 семинар 1 год)
+                      .calendar__text__name 
+                        strong В. Литвинов
+                    .calendar__button
+                      i.zmdi.zmdi-chevron-down
+                      i.zmdi.zmdi-chevron-up
+                  .calendar__block.disabled
+                    .calendar__number 2
+                    .calendar__img
+                      img(src="./tmp/logos/logos-2.png", alt="")
+                    .calendar__text
+                      p Семинар на тему «Здоровый позвоночник»
+                      .calendar__text__name 
+                        strong Е. Быстрова
+                    .calendar__button
+                      i.zmdi.zmdi-chevron-down
+                      i.zmdi.zmdi-chevron-up
+                  .calendar__block.last.disabled
+                    .calendar__number 3
+                    .calendar__img
+                      img(src="./tmp/logos/logos-1.png", alt="")
+                    .calendar__text
+                      p Семинар на тему «Здоровый позвоночник»
+                      .calendar__text__name 
+                        strong Е. Быстрова
+                    .calendar__button
+                      i.zmdi.zmdi-chevron-down
+                      i.zmdi.zmdi-chevron-up
+
+      
+      include ./_include/_footer
+      //- div(style="height: 500px; background-color: #ccc")
+      
+      //[if gte IE 9]
+        <script src='./js/libs/html5shiv/es5-shim.min.js'>
+        <script src='./js/libs/html5shiv/html5shiv.min.js'>
+        <script src='./js/libs/html5shiv/html5shiv-printshiv.min.js'>
+        <script src='./js/libs/respond/respond.min.js'><![endif]
+
+      script(src='./js/libs/jquery/jquery-2.1.4.min.js')
+      script(src='./js/libs/jquery/jquery-migrate-1.2.1.min.js')
+      script(src='./js/libs/modernizr/modernizr.js')
+      script(src='./js/libs/plugins-scroll/plugins-scroll.js')
+      include ./_include/_footer-js
+      script(src='./js/common.js')
+
+    #back-top
+      i.zmdi.zmdi-long-arrow-up
